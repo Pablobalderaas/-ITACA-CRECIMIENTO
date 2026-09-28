@@ -37,4 +37,23 @@ En `index.html`, el `<form id="contact-form">` tiene un atributo `data-endpoint`
 
 El archivo `.nojekyll` hace que GitHub sirva los archivos tal cual, sin procesarlos con Jekyll.
 
-Para usar un dominio propio (por ejemplo `itacacrecimiento.com`), añádelo en Settings → Pages → Custom domain y configura los DNS en tu proveedor del dominio.
+### Dominio propio: itacacrecimiento.com
+
+El archivo `CNAME` indica a GitHub Pages que la web se sirve en `itacacrecimiento.com`. En el panel DNS del proveedor del dominio hay que crear estos registros:
+
+| Tipo | Nombre | Valor |
+|---|---|---|
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
+| AAAA | @ | 2606:50c0:8000::153 |
+| AAAA | @ | 2606:50c0:8001::153 |
+| AAAA | @ | 2606:50c0:8002::153 |
+| AAAA | @ | 2606:50c0:8003::153 |
+| CNAME | www | pablobalderaas.github.io |
+
+- Borra cualquier otro registro A, AAAA o CNAME que ya exista para `@` o `www` (por ejemplo, la página de aparcamiento del proveedor).
+- **No toques los registros MX ni TXT del correo**, o dejará de funcionar `general@itacacrecimiento.com`.
+- Cuando los DNS se hayan propagado (de minutos a 24 horas), marca **Enforce HTTPS** en Settings → Pages.
+- Recomendado: verifica el dominio en la configuración de tu cuenta de GitHub (Settings → Pages → Add a domain) para que nadie más pueda usarlo en GitHub Pages.
