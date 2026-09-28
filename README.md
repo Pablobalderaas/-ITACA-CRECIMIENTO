@@ -27,7 +27,6 @@ En `index.html`, el `<form id="contact-form">` tiene un atributo `data-endpoint`
 
 - El plazo de respuesta de 48 horas laborables.
 - Los textos de las líneas ICO y de las preguntas frecuentes.
-- Los datos del titular en las páginas legales: nombre y apellidos, NIF, domicilio y la localidad para la jurisdicción. Están marcados en naranja como `[...]` (clase `pendiente`).
 - Si se añade analítica u otras cookies no técnicas, actualiza `cookies.html` y pon un banner de consentimiento.
 
 ## Publicar
