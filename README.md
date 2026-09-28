@@ -5,6 +5,7 @@ Web de Ítaca Crecimiento, consultoría de financiación ICO. Es una página ún
 ## Estructura
 
 - `index.html`: la página completa, con el HTML, el CSS y el JS incluidos.
+- `aviso-legal.html`, `privacidad.html` y `cookies.html`: las páginas legales, que usan los estilos de `assets/legal.css`.
 - `assets/velero.avif`: la foto del hero.
 - `assets/logo/`: los logos oficiales (horizontal, horizontal-azul, monocromo, símbolo, vertical e icono). El icono se usa también como favicon.
 
@@ -26,7 +27,8 @@ En `index.html`, el `<form id="contact-form">` tiene un atributo `data-endpoint`
 
 - El plazo de respuesta de 48 horas laborables.
 - Los textos de las líneas ICO y de las preguntas frecuentes.
-- Las páginas legales: aviso legal, privacidad y cookies. Los enlaces del pie apuntan a `#`.
+- Los datos del titular en las páginas legales: nombre y apellidos, NIF, domicilio y la localidad para la jurisdicción. Están marcados en naranja como `[...]` (clase `pendiente`).
+- Si se añade analítica u otras cookies no técnicas, actualiza `cookies.html` y pon un banner de consentimiento.
 
 ## Publicar
 
