@@ -29,6 +29,12 @@ En `index.html`, el `<form id="contact-form">` tiene un atributo `data-endpoint`
 - Los textos de las líneas ICO y de las preguntas frecuentes.
 - Si se añade analítica u otras cookies no técnicas, actualiza `cookies.html` y pon un banner de consentimiento.
 
-## Publicar
+## Publicar en GitHub Pages
 
-Es un sitio estático, así que puedes publicarlo en GitHub Pages (Settings → Pages), Netlify o Cloudflare Pages.
+1. Si el repositorio es privado, GitHub Pages solo funciona con un plan de pago (GitHub Pro o superior). Con el plan gratuito, haz el repositorio público en Settings → General → Danger Zone → Change visibility.
+2. En Settings → Pages, elige Source: **Deploy from a branch**, la rama con la web y la carpeta **/ (root)**, y pulsa Save.
+3. En uno o dos minutos la web estará en `https://<usuario>.github.io/<repositorio>/`.
+
+El archivo `.nojekyll` hace que GitHub sirva los archivos tal cual, sin procesarlos con Jekyll.
+
+Para usar un dominio propio (por ejemplo `itacacrecimiento.com`), añádelo en Settings → Pages → Custom domain y configura los DNS en tu proveedor del dominio.
