@@ -19,12 +19,11 @@ python3 -m http.server 8000
 
 En `index.html`, el `<form id="contact-form">` tiene un atributo `data-endpoint`:
 
-- **Vacío (así está ahora):** al enviar se abre el programa de correo del visitante con la consulta ya redactada para `hola@itacacrecimiento.es`.
+- **Vacío (así está ahora):** al enviar se abre el programa de correo del visitante con la consulta ya redactada para `general@itacacrecimiento.com`.
 - **Con una URL** (por ejemplo, de Formspree o Getform): la consulta se envía por POST y se muestra el mensaje «Gracias.».
 
 ## Pendiente de confirmar
 
-- El correo y el teléfono reales. Ahora son de ejemplo: `hola@itacacrecimiento.es` y `+34 900 000 000`.
 - El plazo de respuesta de 48 horas laborables.
 - Los textos de las líneas ICO y de las preguntas frecuentes.
 - Las páginas legales: aviso legal, privacidad y cookies. Los enlaces del pie apuntan a `#`.
