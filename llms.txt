@@ -1,20 +1,29 @@
 # Ítaca Crecimiento
 
-> Consultoría independiente que ayuda a autónomos y pymes de toda España a solicitar préstamos del Instituto de Crédito Oficial (ICO). Elegimos la línea ICO adecuada, preparamos el expediente completo (documentación, plan de inversión y memoria técnica) y acompañamos la solicitud ante el banco o en ICO Online hasta la firma.
+> Consultoría independiente especializada en ICO Crecimiento, el préstamo directo del Instituto de Crédito Oficial (ICO) para pymes, sin banco intermediario. Comprobamos si la empresa cumple los requisitos, preparamos el expediente completo y acompañamos la solicitud en la plataforma ICO Online hasta la firma.
 
-- Titular: Javier Beltrán, profesional autónomo. Torre del Mar (Málaga), España. Trabajamos con empresas de toda España.
+- Titular: Javier Beltrán, profesional autónomo. Torre del Mar (Málaga), España. Trabajamos con pymes de toda España.
 - Contacto: general@itacacrecimiento.com · https://itacacrecimiento.com/#contacto
-- No somos el ICO ni una entidad financiera y no concedemos préstamos. La decisión corresponde al banco o al ICO.
+- No somos el ICO ni una entidad financiera y no concedemos préstamos. La decisión corresponde al ICO.
+
+## ICO Crecimiento en resumen
+
+- Préstamo directo del ICO, solicitado en ICO Online con certificado digital o Cl@ve.
+- Desde 50.000 €, sin importe máximo fijado; hasta 10 años con hasta 2 de carencia para inversión.
+- Tipo: Euríbor más un diferencial de entre 0,75 % y 1,75 %, según el riesgo.
+- Para pymes con actividad en España, al menos 4 años de antigüedad y cuentas auditadas de los dos últimos ejercicios o un aval público (por ejemplo, de una SGR).
+- Solicitudes hasta el 31 de diciembre de 2027 o hasta agotar los fondos.
+- Datos según la información pública del ICO a septiembre de 2026; las condiciones vigentes están en https://www.ico.es
 
 ## Servicios
 
-- [Diagnóstico de financiación ICO](https://itacacrecimiento.com/#metodo): análisis de la empresa para identificar la línea ICO y el importe viable.
-- [Preparación del expediente](https://itacacrecimiento.com/#metodo): documentación, plan de inversión y memoria técnica cuando la línea lo exige.
-- [Presentación y seguimiento](https://itacacrecimiento.com/#metodo): presentación ante el banco o en ICO Online y acompañamiento hasta la firma.
-- [Líneas que tramitamos](https://itacacrecimiento.com/#lineas): Empresas y Emprendedores, inversión sostenible, internacionalización, crédito comercial, avales y garantías, e ICO Crecimiento.
+- [Diagnóstico ICO Crecimiento](https://itacacrecimiento.com/#metodo): comprobación de requisitos e importe viable.
+- [Expediente ICO Crecimiento](https://itacacrecimiento.com/#metodo): documentación, revisión de cifras y plan de crecimiento.
+- [Acompañamiento en ICO Online](https://itacacrecimiento.com/#metodo): presentación, requerimientos del ICO y firma.
+- [Requisitos](https://itacacrecimiento.com/#requisitos): cómo saber si tu empresa puede pedirlo.
 
 ## Guías
 
-- [Cómo solicitar un préstamo ICO paso a paso](https://itacacrecimiento.com/guias/como-solicitar-un-prestamo-ico/): dónde se pide, quién decide y los pasos hasta la firma.
-- [Documentación para solicitar un préstamo ICO](https://itacacrecimiento.com/guias/documentacion-prestamo-ico/): lista de documentos para autónomos y sociedades.
-- [ICO Crecimiento: requisitos y cómo solicitarlo](https://itacacrecimiento.com/guias/ico-crecimiento/): préstamo directo del ICO para pymes, sin banco.
+- [ICO Crecimiento: requisitos y cómo solicitarlo](https://itacacrecimiento.com/guias/ico-crecimiento/)
+- [Documentación para solicitar un préstamo ICO](https://itacacrecimiento.com/guias/documentacion-prestamo-ico/)
+- [Cómo solicitar un préstamo ICO paso a paso](https://itacacrecimiento.com/guias/como-solicitar-un-prestamo-ico/)

@@ -1,6 +1,6 @@
 # Ítaca Crecimiento
 
-Web de Ítaca Crecimiento, consultoría de financiación ICO. Es una página única y estática, hecha a partir del handoff de diseño `design_handoff_itaca_web`.
+Web de Ítaca Crecimiento, consultoría especializada en ICO Crecimiento, el préstamo directo del ICO para pymes. Es una página única y estática, hecha a partir del handoff de diseño `design_handoff_itaca_web`.
 
 ## Estructura
 
@@ -26,7 +26,7 @@ El formulario envía las consultas a Formspree (`https://formspree.io/f/myezlpqe
 ## Pendiente de confirmar
 
 - El plazo de respuesta de 48 horas laborables.
-- Los textos de las líneas ICO y de las preguntas frecuentes.
+- Las condiciones de ICO Crecimiento (portada, guía y `llms.txt`): comprobarlas en ico.es y actualizarlas si cambian.
 - Si se añade analítica u otras cookies no técnicas, actualiza `cookies.html` y pon un banner de consentimiento.
 
 ## Google Search Console
