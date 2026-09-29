@@ -26,6 +26,14 @@ El formulario envía las consultas a Formspree (`https://formspree.io/f/myezlpqe
 - Los textos de las líneas ICO y de las preguntas frecuentes.
 - Si se añade analítica u otras cookies no técnicas, actualiza `cookies.html` y pon un banner de consentimiento.
 
+## Google Search Console
+
+- `robots.txt` permite rastrear toda la web e indica dónde está el sitemap.
+- `sitemap.xml` lista la página principal. Las páginas legales no se incluyen porque llevan `noindex`.
+- `index.html` declara `https://itacacrecimiento.com/` como dirección canónica.
+
+Al añadir páginas nuevas, inclúyelas en `sitemap.xml` y actualiza su `lastmod`.
+
 ## Publicar en GitHub Pages
 
 1. Si el repositorio es privado, GitHub Pages solo funciona con un plan de pago (GitHub Pro o superior). Con el plan gratuito, haz el repositorio público en Settings → General → Danger Zone → Change visibility.
