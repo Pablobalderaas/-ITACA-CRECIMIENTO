@@ -5,6 +5,9 @@ Web de Ítaca Crecimiento, consultoría de financiación ICO. Es una página ún
 ## Estructura
 
 - `index.html`: la página completa, con el HTML, el CSS y el JS incluidos.
+- `guias/`: sección de guías (una carpeta por guía). Se genera con un script a partir de una plantilla común; usa `assets/legal.css` y `assets/guias.css`.
+- `assets/og-image.jpg`: imagen de 1200×630 que se muestra al compartir la web en WhatsApp o redes.
+- `llms.txt`: resumen de la web para asistentes de IA (ChatGPT, Perplexity, Gemini…).
 - `aviso-legal.html`, `privacidad.html` y `cookies.html`: las páginas legales, que usan los estilos de `assets/legal.css`.
 - `assets/velero.avif`: la foto del hero.
 - `assets/logo/`: los logos oficiales (horizontal, horizontal-azul, monocromo, símbolo, vertical e icono). El icono se usa también como favicon.
@@ -29,7 +32,8 @@ El formulario envía las consultas a Formspree (`https://formspree.io/f/myezlpqe
 ## Google Search Console
 
 - `robots.txt` permite rastrear toda la web e indica dónde está el sitemap.
-- `sitemap.xml` lista la página principal. Las páginas legales no se incluyen porque llevan `noindex`.
+- `sitemap.xml` lista la página principal y las guías. Las páginas legales no se incluyen porque llevan `noindex`.
+- La portada y las guías llevan datos estructurados (schema.org): empresa, preguntas frecuentes, artículos y migas de pan.
 - `index.html` declara `https://itacacrecimiento.com/` como dirección canónica.
 
 Al añadir páginas nuevas, inclúyelas en `sitemap.xml` y actualiza su `lastmod`.

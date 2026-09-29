@@ -1,0 +1,44 @@
+/* Estilos de las guías. Se cargan después de legal.css y reutilizan sus variables. */
+
+.breadcrumb { margin: 0 0 20px; font-size: 13px; color: var(--text-2); }
+.breadcrumb a { color: var(--text-2); }
+.breadcrumb span[aria-hidden] { margin: 0 6px; }
+
+.byline { margin: 0 0 40px; font-size: 14px; color: var(--text-2); }
+.byline strong { color: var(--navy); font-weight: 600; }
+
+.legal-body .lead { font-size: 19px; line-height: 1.65; color: var(--navy); }
+
+.resumen {
+  margin: 0 0 32px; padding: 22px 24px; max-width: 68ch;
+  background: var(--cream); border-top: 2px solid var(--navy); border-radius: 2px;
+}
+.resumen .eyebrow { margin-bottom: 10px; }
+.resumen p, .resumen li { color: var(--navy); font-size: 15px; }
+.resumen ul, .resumen ol { margin-bottom: 0; }
+.resumen p:last-child { margin-bottom: 0; }
+
+.legal-body ol.pasos-guia { padding-left: 22px; max-width: 68ch; }
+.legal-body ol.pasos-guia > li { margin-bottom: 14px; }
+.legal-body ol.pasos-guia > li::marker { color: var(--terra); font-weight: 600; }
+
+.cta {
+  margin: 48px 0 0; padding: 28px; max-width: 68ch;
+  background: var(--navy); border-radius: 2px;
+  display: flex; flex-direction: column; gap: 16px; align-items: flex-start;
+}
+.legal-body .cta h2 { margin: 0; padding: 0; border: 0; color: var(--paper); font-size: 22px; }
+.legal-body .cta p { margin: 0; color: var(--cream); }
+.cta .btn {
+  display: inline-block; background: var(--terra); color: var(--paper); text-decoration: none;
+  padding: 15px 26px; font-size: 15px; font-weight: 600; border-radius: 2px;
+}
+.cta .btn:hover { background: #9C4624; color: var(--paper); }
+
+.guia-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); max-width: 68ch; }
+.guia-list li { margin: 0; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.legal-body .guia-list h2 { margin: 0 0 8px; padding: 0; border: 0; font-size: 21px; }
+.guia-list h2 a { text-decoration: none; }
+.guia-list p { margin: 0; }
+
+.legal-body .faq-guia h3 { margin-top: 24px; }
