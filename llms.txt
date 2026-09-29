@@ -25,5 +25,6 @@
 ## Guías
 
 - [ICO Crecimiento: requisitos y cómo solicitarlo](https://itacacrecimiento.com/guias/ico-crecimiento/)
+- [Aval de SGR: cómo te ayuda a pedir ICO Crecimiento](https://itacacrecimiento.com/guias/aval-sgr/): la alternativa a las cuentas auditadas.
 - [Documentación para solicitar un préstamo ICO](https://itacacrecimiento.com/guias/documentacion-prestamo-ico/)
 - [Cómo solicitar un préstamo ICO paso a paso](https://itacacrecimiento.com/guias/como-solicitar-un-prestamo-ico/)
