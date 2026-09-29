@@ -439,14 +439,15 @@
       </div>
 
       <!--
-        Envío del formulario: pon en data-endpoint la URL de tu servicio de formularios
-        (por ejemplo Formspree: https://formspree.io/f/XXXXXXX). Si lo dejas vacío,
-        al enviar se abre el programa de correo del visitante con la consulta ya redactada.
+        Envío del formulario: las consultas se envían a Formspree (data-endpoint), que las
+        reenvía a general@itacacrecimiento.com. Si se deja data-endpoint vacío, al enviar se
+        abre el programa de correo del visitante con la consulta ya redactada.
       -->
-      <form class="form" id="contact-form" data-endpoint="" novalidate>
+      <form class="form" id="contact-form" data-endpoint="https://formspree.io/f/myezlpqe" novalidate>
+        <input type="hidden" name="_subject" value="Consulta de financiación ICO">
         <label class="field">Nombre<input id="f-nombre" name="nombre" autocomplete="name" required></label>
         <label class="field">Empresa<input id="f-empresa" name="empresa" autocomplete="organization"></label>
-        <label class="field">Correo<input id="f-correo" name="correo" type="email" autocomplete="email" required></label>
+        <label class="field">Correo<input id="f-correo" name="email" type="email" autocomplete="email" required></label>
         <label class="field">Teléfono<input id="f-telefono" name="telefono" type="tel" autocomplete="tel"></label>
         <label class="field full">Importe aproximado
           <select id="f-importe" name="importe">
@@ -578,7 +579,7 @@
       var body = [
         'Nombre: ' + data.get('nombre'),
         'Empresa: ' + (data.get('empresa') || '-'),
-        'Correo: ' + data.get('correo'),
+        'Correo: ' + data.get('email'),
         'Teléfono: ' + (data.get('telefono') || '-'),
         'Importe aproximado: ' + data.get('importe'),
         '',

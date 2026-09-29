@@ -18,10 +18,7 @@ python3 -m http.server 8000
 
 ## Formulario de contacto
 
-En `index.html`, el `<form id="contact-form">` tiene un atributo `data-endpoint`:
-
-- **Vacío (así está ahora):** al enviar se abre el programa de correo del visitante con la consulta ya redactada para `general@itacacrecimiento.com`.
-- **Con una URL** (por ejemplo, de Formspree o Getform): la consulta se envía por POST y se muestra el mensaje «Gracias.».
+El formulario envía las consultas a Formspree (`https://formspree.io/f/myezlpqe`, en el atributo `data-endpoint` del `<form id="contact-form">`), que las reenvía a `general@itacacrecimiento.com`. El campo del correo se llama `email` para que, al pulsar Responder, la respuesta vaya a quien escribió. Si se deja `data-endpoint` vacío, al enviar se abre el programa de correo del visitante con la consulta ya redactada.
 
 ## Pendiente de confirmar
 
