@@ -9,8 +9,10 @@
 ## ICO Crecimiento en resumen
 
 - Préstamo directo del ICO, solicitado en ICO Online con certificado digital o Cl@ve.
-- Desde 50.000 €, sin importe máximo fijado; hasta 10 años con hasta 2 de carencia para inversión.
-- Tipo: Euríbor más un diferencial de entre 0,75 % y 1,75 %, según el riesgo.
+- Desde 50.000 €, sin importe máximo fijado.
+- Circulante: hasta 5 años con hasta 1 de carencia, hasta el 100 % de la necesidad.
+- Inversión: hasta 10 años con hasta 2 de carencia, hasta el 80 % de la inversión.
+- Tipo: Euríbor más un diferencial de entre 0,75 % y 1,75 %, según el riesgo. Comisión de apertura del 0,5 %.
 - Para pymes con actividad en España, al menos 4 años de antigüedad y cuentas auditadas de los dos últimos ejercicios o un aval público (por ejemplo, de una SGR).
 - Solicitudes hasta el 31 de diciembre de 2027 o hasta agotar los fondos.
 - Datos según la información pública del ICO a septiembre de 2026; las condiciones vigentes están en https://www.ico.es
@@ -25,6 +27,7 @@
 ## Guías
 
 - [ICO Crecimiento: requisitos y cómo solicitarlo](https://itacacrecimiento.com/guias/ico-crecimiento/)
+- [ICO Crecimiento para circulante](https://itacacrecimiento.com/guias/ico-crecimiento-circulante/): cómo financiar el día a día de la empresa a 5 años.
 - [Aval de SGR: cómo te ayuda a pedir ICO Crecimiento](https://itacacrecimiento.com/guias/aval-sgr/): la alternativa a las cuentas auditadas.
 - [Documentación para solicitar un préstamo ICO](https://itacacrecimiento.com/guias/documentacion-prestamo-ico/)
 - [Cómo solicitar un préstamo ICO paso a paso](https://itacacrecimiento.com/guias/como-solicitar-un-prestamo-ico/)
