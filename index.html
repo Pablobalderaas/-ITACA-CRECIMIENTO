@@ -259,6 +259,7 @@
     display: flex; align-items: center; gap: clamp(16px, 3vw, 40px);
     font-size: 14px; font-weight: 500; letter-spacing: 0.02em;
   }
+  .nav-links a { white-space: nowrap; }
   .btn-nav {
     color: var(--paper); background: var(--navy);
     padding: 12px 22px; border-radius: 2px;
@@ -349,6 +350,8 @@
     gap: 24px; align-items: baseline; padding: 30px 0; border-top: 1px solid var(--line);
   }
   #guias { padding-top: var(--pad-y); padding-bottom: 0; }
+  #blog { padding-top: clamp(56px, 7vw, 96px); padding-bottom: 0; }
+  #blog .linea .n { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; }
   #ico-crecimiento { padding-bottom: clamp(56px, 7vw, 96px); }
   #ico-crecimiento .linea { grid-template-columns: 120px minmax(0, 1.1fr) minmax(0, 1.4fr); }
   #ico-crecimiento .linea .n, #guias .linea .n { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; }
@@ -520,6 +523,7 @@
       <a href="#requisitos">Requisitos</a>
       <a href="#metodo">Método</a>
       <a href="guias/">Guías</a>
+      <a href="blog/">Blog</a>
       <a href="#preguntas">Preguntas</a>
       <a class="btn-nav" href="#contacto">Contactar</a>
     </div>
@@ -609,6 +613,18 @@
       <div class="linea"><span class="n">Guía</span><h3><a href="guias/aval-sgr/">Aval de SGR: cómo te ayuda a pedir ICO Crecimiento</a></h3><p>La alternativa si tu empresa no tiene las cuentas auditadas: qué es, cómo se pide y qué cuesta.</p></div>
       <div class="linea"><span class="n">Guía</span><h3><a href="guias/documentacion-prestamo-ico/">Documentación para solicitar un préstamo ICO</a></h3><p>La lista completa de documentos que conviene tener preparados.</p></div>
       <div class="linea"><span class="n">Guía</span><h3><a href="guias/como-solicitar-un-prestamo-ico/">Cómo solicitar un préstamo ICO paso a paso</a></h3><p>Las diferencias entre ICO Crecimiento y las líneas que se piden en el banco.</p></div>
+    </div>
+  </section>
+
+  <section class="lineas container" id="blog" aria-labelledby="blog-title">
+    <div class="lineas-head">
+      <h2 class="h2" id="blog-title">Del blog</h2>
+      <p>Casos por sector, comparativas y consejos para preparar tu solicitud. <a href="blog/" style="text-decoration:underline">Ver todos los artículos</a>.</p>
+    </div>
+    <div class="lineas-list">
+      <div class="linea"><span class="n">Blog</span><h3><a href="blog/ico-crecimiento-o-prestamo-bancario/">ICO Crecimiento o préstamo bancario: cuál te conviene</a></h3><p>Diferencias, ventajas de cada uno y cuándo combinarlos.</p></div>
+      <div class="linea"><span class="n">Blog</span><h3><a href="blog/ico-crecimiento-empresas-de-transporte/">ICO Crecimiento para empresas de transporte</a></h3><p>Financiar el gasoil y las nóminas mientras cobras, o renovar la flota.</p></div>
+      <div class="linea"><span class="n">Blog</span><h3><a href="blog/errores-al-solicitar-ico-crecimiento/">7 errores al solicitar ICO Crecimiento</a></h3><p>Lo que más retrasa las solicitudes y cómo evitarlo.</p></div>
     </div>
   </section>
 
@@ -728,7 +744,7 @@
         <text class="tag" x="124" y="124" fill="#F3EEE4">CRECIMIENTO</text>
       </svg>
       <div class="cols">
-        <div><a href="#ico-crecimiento">ICO Crecimiento</a><a href="#requisitos">Requisitos</a><a href="#metodo">Método</a><a href="guias/">Guías</a><a href="#contacto">Contacto</a></div>
+        <div><a href="#ico-crecimiento">ICO Crecimiento</a><a href="#requisitos">Requisitos</a><a href="#metodo">Método</a><a href="guias/">Guías</a><a href="blog/">Blog</a><a href="#contacto">Contacto</a></div>
         <div><a href="aviso-legal.html">Aviso legal</a><a href="privacidad.html">Privacidad</a><a href="cookies.html">Cookies</a></div>
       </div>
     </div>

@@ -5,7 +5,9 @@ Web de Ítaca Crecimiento, consultoría especializada en ICO Crecimiento, el pr�
 ## Estructura
 
 - `index.html`: la página completa, con el HTML, el CSS y el JS incluidos.
-- `guias/`: sección de guías (una carpeta por guía). Se genera con un script a partir de una plantilla común; usa `assets/legal.css` y `assets/guias.css`.
+- `guias/`: guías de referencia (una carpeta por guía).
+- `blog/`: artículos fechados (una carpeta por artículo).
+- `herramientas/gen_guias.py` y `herramientas/gen_blog.py`: generan las guías y el blog a partir de una plantilla común (usan `assets/legal.css` y `assets/guias.css`). Para añadir un artículo, añade una entrada a `POSTS` en `gen_blog.py` y ejecuta `python3 herramientas/gen_blog.py .` desde la raíz. Después añade la URL a `sitemap.xml` y a `llms.txt`.
 - `assets/og-image.jpg`: imagen de 1200×630 que se muestra al compartir la web en WhatsApp o redes.
 - `llms.txt`: resumen de la web para asistentes de IA (ChatGPT, Perplexity, Gemini…).
 - `aviso-legal.html`, `privacidad.html` y `cookies.html`: las páginas legales, que usan los estilos de `assets/legal.css`.
