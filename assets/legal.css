@@ -124,3 +124,8 @@ a:hover { color: var(--terra); text-decoration-color: currentColor; }
 
 .legal-header.nav-hidden { transform: translateY(-110%); }
 @media (prefers-reduced-motion: reduce) { .legal-header { transition: none; } }
+
+/* Aparición suave al hacer scroll (assets/reveal.js) */
+.reveal-on .rv { opacity: 0; transform: translateY(22px); transition: opacity .8s ease, transform .8s cubic-bezier(.2, .7, .2, 1); }
+.reveal-on .rv.is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal-on .rv { opacity: 1; transform: none; transition: none; } }

@@ -309,6 +309,7 @@ def page(depth, url, title, desc, current, body, jsonld, og_type="article"):
 </footer>
 
 <script src="{up}assets/nav.js" defer></script>
+<script src="{up}assets/reveal.js" defer></script>
 </body>
 </html>
 '''

@@ -168,6 +168,7 @@ cuerpo="""
   <div><dt>Plazo inversión</dt><dd>Hasta 10 años, con hasta 2 años de carencia de principal. Financia hasta el 80 % de la inversión</dd></div>
   <div><dt>Tipo de interés</dt><dd>Euríbor más un diferencial de entre 0,75 % y 1,75 %, según el riesgo de la operación</dd></div>
   <div><dt>Comisión de apertura</dt><dd>0,5 % del importe concedido</dd></div>
+  <div><dt>Gastos de consultoría</dt><dd>Financiables: la línea considera financiables los gastos de consultoría y calificación crediticia necesarios para solicitar el préstamo, hasta el 100 %</dd></div>
   <div><dt>Finalidad</dt><dd>Activos fijos materiales, inmateriales o financieros, y necesidades de circulante</dd></div>
   <div><dt>Solicitud</dt><dd>En la plataforma ICO Online, con certificado digital o Cl@ve</dd></div>
   <div><dt>Plazo de solicitud</dt><dd>Hasta el 31 de diciembre de 2027 o hasta agotar los fondos</dd></div>
@@ -456,6 +457,7 @@ def page(depth, url, title, desc, side_current, body, jsonld):
 </footer>
 
 <script src="{up}assets/nav.js" defer></script>
+<script src="{up}assets/reveal.js" defer></script>
 </body>
 </html>
 '''

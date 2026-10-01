@@ -172,6 +172,14 @@
     },
     {
       "@type": "Question",
+      "name": "¿Se pueden financiar vuestros honorarios?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. La normativa de la línea considera financiables los gastos de consultoría y calificación crediticia necesarios para solicitar el préstamo, hasta el 100 %. Es decir, nuestros honorarios pueden incluirse en la propia operación."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "¿Me garantizáis que me lo concedan?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -212,6 +220,10 @@
 
   * { box-sizing: border-box; }
   [hidden] { display: none !important; }
+  /* Aparición suave al hacer scroll (assets/reveal.js) */
+  .reveal-on .rv { opacity: 0; transform: translateY(22px); transition: opacity .8s ease, transform .8s cubic-bezier(.2, .7, .2, 1); }
+  .reveal-on .rv.is-in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal-on .rv { opacity: 1; transform: none; transition: none; } }
   html { scroll-behavior: smooth; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   body {
@@ -512,7 +524,7 @@
   }
 </style>
 </head>
-<body>
+<body data-reveal="main .eyebrow, main .h2, .intro-big, .intro-small, .lineas-head p, .nota-datos, .linea, .paso, .requisitos-nota, .compromiso svg, .compromiso blockquote, .faq-item, .contacto-lead, .datos, .form, .footer .top, .hero-text > *">
 
 <!-- Símbolo del logo, reutilizado en toda la página -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -591,6 +603,7 @@
       <div class="linea"><span class="n">Importe</span><h3>Desde 50.000 €</h3><p>Sin importe máximo fijado. El importe viable depende de la necesidad y de la situación de la empresa.</p></div>
       <div class="linea"><span class="n">Coste</span><h3>Euríbor + 0,75 % a 1,75 %</h3><p>El diferencial depende del riesgo de la operación. Comisión de apertura del 0,5 %.</p></div>
       <div class="linea"><span class="n">Sin banco</span><h3>Directo con el ICO</h3><p>La solicitud se presenta en la plataforma ICO Online, con certificado digital o Cl@ve, y es el propio ICO quien analiza y concede el préstamo.</p></div>
+      <div class="linea"><span class="n">Consultoría</span><h3>Nuestros honorarios, financiables</h3><p>La normativa de la línea considera financiables los gastos de consultoría y calificación crediticia necesarios para solicitar el préstamo, hasta el 100 %. Es decir, nuestros honorarios pueden incluirse en la propia operación.</p></div>
       <div class="linea"><span class="n">Hasta</span><h3>31 de diciembre de 2027</h3><p>O hasta que se agoten los fondos disponibles.</p></div>
     </div>
     <p class="nota-datos">Condiciones según la información pública del ICO a septiembre de 2026. Pueden cambiar: las vigentes son las publicadas en <a href="https://www.ico.es" rel="noopener">ico.es</a>. <a href="guias/ico-crecimiento/">Guía completa de ICO Crecimiento</a>.</p>
@@ -696,8 +709,12 @@
         <p class="faq-a" id="faq-a-7" role="region" aria-labelledby="faq-q-7" hidden>No. Antes de empezar hacemos un estudio gratuito y sin compromiso en el que te decimos si la operación es viable, cuánto conviene pedir y qué puntos hay que reforzar. Con eso decides si quieres que preparemos la solicitud.</p>
       </div>
       <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-8" id="faq-q-8"><span>¿Me garantizáis que me lo concedan?</span><span class="icon" aria-hidden="true">+</span></button>
-        <p class="faq-a" id="faq-a-8" role="region" aria-labelledby="faq-q-8" hidden>No. La decisión la toma siempre el ICO. Lo que hacemos es que tu solicitud llegue completa, coherente y bien argumentada, y te avisamos antes si vemos algo que pueda jugar en contra.</p>
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-8" id="faq-q-8"><span>¿Se pueden financiar vuestros honorarios?</span><span class="icon" aria-hidden="true">+</span></button>
+        <p class="faq-a" id="faq-a-8" role="region" aria-labelledby="faq-q-8" hidden>Sí. La normativa de la línea considera financiables los gastos de consultoría y calificación crediticia necesarios para solicitar el préstamo, hasta el 100 %. Es decir, nuestros honorarios pueden incluirse en la propia operación.</p>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-9" id="faq-q-9"><span>¿Me garantizáis que me lo concedan?</span><span class="icon" aria-hidden="true">+</span></button>
+        <p class="faq-a" id="faq-a-9" role="region" aria-labelledby="faq-q-9" hidden>No. La decisión la toma siempre el ICO. Lo que hacemos es que tu solicitud llegue completa, coherente y bien argumentada, y te avisamos antes si vemos algo que pueda jugar en contra.</p>
       </div>
     </div>
   </section>
@@ -893,5 +910,6 @@
   })();
 </script>
 <script src="assets/nav.js" defer></script>
+<script src="assets/reveal.js" defer></script>
 </body>
 </html>
