@@ -1,0 +1,11 @@
+{
+  "name": "Ítaca Crecimiento",
+  "short_name": "Ítaca",
+  "icons": [
+    { "src": "/assets/logo/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/logo/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#0E2A47",
+  "background_color": "#FAF7F1",
+  "display": "browser"
+}
