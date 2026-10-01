@@ -307,8 +307,10 @@
     if (a.corriente === 'deudas') bloqueos.push('Hay que estar al corriente con Hacienda y la Seguridad Social. Si pagas la deuda o consigues un aplazamiento y lo cumples, podrás solicitarlo.');
 
     if (a.pyme === 'nose') avisos.push('Comprueba que tu empresa es pyme: menos de 250 empleados y hasta 50 millones de facturación o 43 de balance.');
-    if (a.auditadas === 'no') avisos.push('Sin cuentas auditadas, necesitarás un aval público, por ejemplo de una <a href="../guias/aval-sgr/">sociedad de garantía recíproca (SGR)</a>.');
-    if (a.auditadas === 'nose') avisos.push('Comprueba si tus cuentas están auditadas. Si no lo están, la alternativa es un <a href="../guias/aval-sgr/">aval de SGR</a>.');
+    var notas = [];
+    if (a.auditadas === 'no') notas.push('No tener las cuentas auditadas no es un problema: en ese caso la operación se respalda con el aval de una sociedad de garantía recíproca (SGR), que se tramita a través del propio ICO junto con la solicitud. Nosotros lo coordinamos por ti. <a href="../guias/aval-sgr/">Cómo funciona el aval de SGR</a>.');
+    if (a.auditadas === 'nose') notas.push('Si tus cuentas no están auditadas, no pasa nada: la operación se respalda con el aval de una SGR, que se tramita a través del propio ICO junto con la solicitud. <a href="../guias/aval-sgr/">Cómo funciona</a>.');
+    var notasHtml = notas.length ? '<p><strong>A tener en cuenta:</strong> ' + notas.join(' ') + '</p>' : '';
     if (a.resultados === 'perdida1') avisos.push('Un ejercicio con pérdidas no impide solicitarlo, pero conviene explicar el motivo en la solicitud.');
     if (a.resultados === 'nose') avisos.push('Revisa en las cuentas anuales si ha habido pérdidas y si el patrimonio neto es positivo: es de lo primero que se analiza.');
     if (a.corriente === 'aplazada') avisos.push('Con deudas aplazadas, comprueba que los certificados de Hacienda y de la Seguridad Social salen «al corriente» antes de presentar la solicitud.');
@@ -332,7 +334,7 @@
       estado = 'Encajas, con algún punto por resolver';
       titulo = 'Tu empresa puede encajar en ICO Crecimiento';
       detalle = '<p>Cumples los requisitos básicos. Antes de solicitarlo conviene resolver esto:</p>' + li(avisos) +
-        '<p>Las condiciones que te aplicarían:</p>' + li(condiciones(a.finalidad));
+        '<p>Las condiciones que te aplicarían:</p>' + li(condiciones(a.finalidad)) + notasHtml;
       asunto = 'Test ICO Crecimiento: encaja con condiciones';
       leadTitle = '¿Quieres que revisemos tu caso?';
     } else {
@@ -340,7 +342,7 @@
       estado = 'Buenas noticias';
       titulo = 'Tu empresa encaja en ICO Crecimiento';
       detalle = '<p>Según tus respuestas, cumples los requisitos principales. Las condiciones que te aplicarían:</p>' + li(condiciones(a.finalidad)) +
-        '<p>Desde 50.000 €, a Euríbor más un diferencial de entre el 0,75 % y el 1,75 %, y sin pasar por el banco.</p>';
+        '<p>Desde 50.000 €, a Euríbor más un diferencial de entre el 0,75 % y el 1,75 %, y sin pasar por el banco.</p>' + notasHtml;
       asunto = 'Test ICO Crecimiento: encaja';
       leadTitle = 'Siguiente paso: preparar tu solicitud';
     }
