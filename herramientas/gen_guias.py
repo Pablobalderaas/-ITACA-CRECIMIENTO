@@ -429,7 +429,7 @@ def page(depth, url, title, desc, side_current, body, jsonld):
 </head>
 <body>
 
-<header class="legal-header">
+<header class="legal-header" data-autohide="sticky">
   <div class="inner">
     <a href="{up}" aria-label="Ítaca Crecimiento, volver al inicio">
       {LOGO}
@@ -455,6 +455,7 @@ def page(depth, url, title, desc, side_current, body, jsonld):
   </div>
 </footer>
 
+<script src="{up}assets/nav.js" defer></script>
 </body>
 </html>
 '''
