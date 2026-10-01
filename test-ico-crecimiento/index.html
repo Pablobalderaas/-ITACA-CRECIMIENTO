@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Test: ¿puede tu empresa pedir ICO Crecimiento? | Ítaca Crecimiento</title>
-<meta name="description" content="Responde 6 preguntas y descubre en un minuto si tu empresa cumple los requisitos de ICO Crecimiento, el préstamo directo del ICO para pymes. Gratis y sin registro.">
+<meta name="description" content="Responde 8 preguntas y descubre en un minuto si tu empresa cumple los requisitos de ICO Crecimiento, el préstamo directo del ICO para pymes. Gratis y sin registro.">
 <link rel="canonical" href="https://itacacrecimiento.com/test-ico-crecimiento/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ítaca Crecimiento">
 <meta property="og:locale" content="es_ES">
 <meta property="og:title" content="Test: ¿puede tu empresa pedir ICO Crecimiento?">
-<meta property="og:description" content="Responde 6 preguntas y descubre en un minuto si tu empresa cumple los requisitos de ICO Crecimiento.">
+<meta property="og:description" content="Responde 8 preguntas y descubre en un minuto si tu empresa cumple los requisitos de ICO Crecimiento.">
 <meta property="og:url" content="https://itacacrecimiento.com/test-ico-crecimiento/">
 <meta property="og:image" content="https://itacacrecimiento.com/assets/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -28,7 +28,7 @@
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Test: ¿puede tu empresa pedir ICO Crecimiento?",
-  "description": "Test gratuito de 6 preguntas para comprobar si una pyme cumple los requisitos de ICO Crecimiento, el préstamo directo del ICO.",
+  "description": "Test gratuito de 8 preguntas para comprobar si una pyme cumple los requisitos de ICO Crecimiento, el préstamo directo del ICO.",
   "url": "https://itacacrecimiento.com/test-ico-crecimiento/",
   "inLanguage": "es-ES",
   "publisher": { "@type": "ProfessionalService", "@id": "https://itacacrecimiento.com/#empresa", "name": "Ítaca Crecimiento", "url": "https://itacacrecimiento.com/" }
@@ -122,7 +122,7 @@
   <article class="legal-body">
     <p class="breadcrumb"><a href="../">Inicio</a><span aria-hidden="true">/</span>Test ICO Crecimiento</p>
     <h1>¿Puede tu empresa pedir ICO Crecimiento?</h1>
-    <p class="lead">Responde 6 preguntas y descubre en un minuto si tu empresa cumple los requisitos del préstamo directo del ICO para pymes. Es gratis y no tienes que registrarte.</p>
+    <p class="lead">Responde 8 preguntas y descubre en un minuto si tu empresa cumple los requisitos del préstamo directo del ICO para pymes. Es gratis y no tienes que registrarte.</p>
 
     <form class="test" id="test" novalidate>
       <fieldset class="q" data-q="pyme">
@@ -181,6 +181,29 @@
         </div>
       </fieldset>
 
+      <fieldset class="q" data-q="resultados">
+        <legend><span class="num">7.</span>¿Ha tenido pérdidas en los dos últimos ejercicios o tiene patrimonio neto negativo?</legend>
+        <p class="hint">El patrimonio neto es negativo cuando las pérdidas acumuladas superan el capital y las reservas de la empresa. Lo ves en el balance de las cuentas anuales.</p>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="resultados" value="beneficios"><span>No, ha tenido beneficios</span></label>
+          <label class="opt"><input type="radio" name="resultados" value="perdida1"><span>Pérdidas en uno de los dos</span></label>
+          <label class="opt"><input type="radio" name="resultados" value="perdidas2"><span>Pérdidas en los dos</span></label>
+          <label class="opt"><input type="radio" name="resultados" value="pnnegativo"><span>Patrimonio neto negativo</span></label>
+          <label class="opt"><input type="radio" name="resultados" value="nose"><span>No lo sé</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="q" data-q="corriente">
+        <legend><span class="num">8.</span>¿Está al corriente de pago con Hacienda y la Seguridad Social?</legend>
+        <p class="hint">Hay que presentar los certificados de estar al corriente. Una deuda con aplazamiento concedido y al día no suele impedirlo.</p>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="corriente" value="si"><span>Sí, sin deudas</span></label>
+          <label class="opt"><input type="radio" name="corriente" value="aplazada"><span>Tengo deudas aplazadas y al día</span></label>
+          <label class="opt"><input type="radio" name="corriente" value="deudas"><span>Tengo deudas sin aplazar</span></label>
+          <label class="opt"><input type="radio" name="corriente" value="nose"><span>No lo sé</span></label>
+        </div>
+      </fieldset>
+
       <div class="test-actions">
         <button class="btn-test" type="submit">Ver mi resultado</button>
         <p class="test-error" id="test-error" role="alert" hidden></p>
@@ -232,14 +255,16 @@
 
 <script>
 (function () {
-  var Q = ['pyme', 'espana', 'antiguedad', 'auditadas', 'finalidad', 'importe'];
+  var Q = ['pyme', 'espana', 'antiguedad', 'auditadas', 'finalidad', 'importe', 'resultados', 'corriente'];
   var TXT = {
     pyme: { si: 'Pyme: sí', no: 'Pyme: no', nose: 'Pyme: no lo sabe' },
     espana: { si: 'Actividad en España: sí', no: 'Actividad en España: no' },
     antiguedad: { '4mas': 'Antigüedad: 4 años o más', menos4: 'Antigüedad: menos de 4 años' },
     auditadas: { si: 'Cuentas auditadas: sí', no: 'Cuentas auditadas: no', nose: 'Cuentas auditadas: no lo sabe' },
     finalidad: { circulante: 'Finalidad: circulante', inversion: 'Finalidad: inversión', ambas: 'Finalidad: circulante e inversión', otra: 'Finalidad: otra' },
-    importe: { '50-250': 'Importe: 50.000 – 250.000 €', '250-1000': 'Importe: 250.000 – 1.000.000 €', mas1000: 'Importe: más de 1.000.000 €' }
+    importe: { '50-250': 'Importe: 50.000 – 250.000 €', '250-1000': 'Importe: 250.000 – 1.000.000 €', mas1000: 'Importe: más de 1.000.000 €' },
+    resultados: { beneficios: 'Resultados: beneficios', perdida1: 'Resultados: pérdidas en uno de los dos últimos ejercicios', perdidas2: 'Resultados: pérdidas en los dos últimos ejercicios', pnnegativo: 'Patrimonio neto negativo', nose: 'Resultados: no lo sabe' },
+    corriente: { si: 'Hacienda y Seguridad Social: al corriente', aplazada: 'Hacienda y Seguridad Social: deudas aplazadas y al día', deudas: 'Hacienda y Seguridad Social: deudas sin aplazar', nose: 'Hacienda y Seguridad Social: no lo sabe' }
   };
   var test = document.getElementById('test');
   var err = document.getElementById('test-error');
@@ -277,9 +302,17 @@
     if (a.espana === 'no') bloqueos.push('La empresa tiene que tener domicilio, establecimiento o sucursal de actividad en España.');
     if (a.antiguedad === 'menos4') bloqueos.push('La empresa necesita al menos 4 años de antigüedad.');
 
+    if (a.resultados === 'pnnegativo') bloqueos.push('Con patrimonio neto negativo es muy difícil acceder a financiación pública: estas líneas suelen excluir a las empresas en situación de crisis. A veces se puede corregir antes de solicitar, por ejemplo con una ampliación de capital.');
+    if (a.corriente === 'deudas') bloqueos.push('Hay que estar al corriente con Hacienda y la Seguridad Social. Si pagas la deuda o consigues un aplazamiento y lo cumples, podrás solicitarlo.');
+
     if (a.pyme === 'nose') avisos.push('Comprueba que tu empresa es pyme: menos de 250 empleados y hasta 50 millones de facturación o 43 de balance.');
     if (a.auditadas === 'no') avisos.push('Sin cuentas auditadas, necesitarás un aval público, por ejemplo de una <a href="../guias/aval-sgr/">sociedad de garantía recíproca (SGR)</a>.');
     if (a.auditadas === 'nose') avisos.push('Comprueba si tus cuentas están auditadas. Si no lo están, la alternativa es un <a href="../guias/aval-sgr/">aval de SGR</a>.');
+    if (a.resultados === 'perdidas2') avisos.push('Con pérdidas en los dos últimos ejercicios, el ICO mirará con especial atención la viabilidad. Habrá que explicar bien las causas y cómo vuelve la empresa a beneficios.');
+    if (a.resultados === 'perdida1') avisos.push('Un ejercicio con pérdidas no impide solicitarlo, pero conviene explicar el motivo en la solicitud.');
+    if (a.resultados === 'nose') avisos.push('Revisa en las cuentas anuales si ha habido pérdidas y si el patrimonio neto es positivo: es de lo primero que se analiza.');
+    if (a.corriente === 'aplazada') avisos.push('Con deudas aplazadas, comprueba que los certificados de Hacienda y de la Seguridad Social salen «al corriente» antes de presentar la solicitud.');
+    if (a.corriente === 'nose') avisos.push('Pide los certificados de estar al corriente con Hacienda y la Seguridad Social: son necesarios para la solicitud.');
     if (a.finalidad === 'otra') avisos.push('ICO Crecimiento financia circulante e inversión. Si tu necesidad es otra, por ejemplo reorganizar deudas, hay que revisar si encaja.');
 
     var box = document.getElementById('veredicto');
@@ -288,8 +321,10 @@
       box.className = 'veredicto no';
       estado = 'Ahora mismo no encajas';
       titulo = 'Tu empresa no cumple algún requisito de ICO Crecimiento';
-      detalle = '<p>Según tus respuestas:</p>' + li(bloqueos) +
-        '<p>Aun así, hay otras vías: líneas del ICO que se piden a través del banco, avales o financiación bancaria. Cuéntanos tu caso y te orientamos.</p>';
+      var corregible = a.resultados === 'pnnegativo' || a.corriente === 'deudas';
+      detalle = '<p>Según tus respuestas:</p>' + li(bloqueos) + (corregible
+        ? '<p>Cuéntanos tu caso: te decimos qué habría que corregir y cuándo podrías solicitarlo.</p>'
+        : '<p>Aun así, hay otras vías: líneas del ICO que se piden a través del banco, avales o financiación bancaria. Cuéntanos tu caso y te orientamos.</p>');
       asunto = 'Test ICO Crecimiento: no encaja';
       leadTitle = '¿Quieres que te orientemos hacia otra vía?';
     } else if (avisos.length) {
