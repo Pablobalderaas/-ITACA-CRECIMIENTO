@@ -315,7 +315,7 @@ def page(depth, url, title, desc, current, body, jsonld, og_type="article"):
 CTA = '''
     <aside class="cta">
       <h2>¿Quieres solicitar ICO Crecimiento?</h2>
-      <p>Comprobamos si tu empresa cumple los requisitos, preparamos el expediente completo y te acompañamos en la solicitud en ICO Online hasta la firma.</p>
+      <p>Empezamos con un <strong>estudio gratuito y sin compromiso</strong>: si la operación es viable y cuánto conviene pedir. Si decides seguir, preparamos el expediente completo y te acompañamos en ICO Online hasta la firma.</p>
       <a class="btn" href="{up}test-ico-crecimiento/">Haz el test de requisitos (1 minuto)</a>
       <p style="font-size:14px">O <a href="{up}#contacto" style="color:var(--cream);text-decoration:underline">escríbenos directamente</a>.</p>
     </aside>'''

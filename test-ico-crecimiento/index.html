@@ -196,7 +196,7 @@
 
       <form class="lead-form" id="lead-form" data-endpoint="https://formspree.io/f/myezlpqe" novalidate>
         <h3 id="lead-title">¿Quieres que revisemos tu caso?</h3>
-        <p class="intro">Déjanos tus datos y te enviamos una primera valoración gratuita en 48 horas laborables. Recibiremos también tus respuestas del test, así no tendrás que repetirlas.</p>
+        <p class="intro">Déjanos tus datos y te hacemos un estudio gratuito y sin compromiso: si la operación es viable y cuánto conviene pedir. Te respondemos en 48 horas laborables. Recibiremos también tus respuestas del test, así no tendrás que repetirlas.</p>
         <input type="hidden" name="_subject" id="lead-subject" value="Test ICO Crecimiento">
         <input type="hidden" name="resultado_test" id="lead-resultado">
         <input type="hidden" name="respuestas_test" id="lead-respuestas">
@@ -208,7 +208,7 @@
         <p class="lead-error" id="lead-error" role="alert" hidden></p>
         <div class="lead-foot">
           <span>Tus datos se usan solo para responder a esta consulta. Más información en la <a href="../privacidad.html">política de privacidad</a>.</span>
-          <button class="btn-test" type="submit">Quiero una valoración</button>
+          <button class="btn-test" type="submit">Quiero el estudio gratuito</button>
         </div>
       </form>
       <div class="lead-ok" id="lead-ok" hidden>
@@ -354,7 +354,7 @@
         lerr.textContent = 'No se ha podido enviar. Inténtalo de nuevo o escríbenos a general@itacacrecimiento.com.';
         lerr.hidden = false;
       })
-      .finally(function () { btn.disabled = false; btn.textContent = 'Quiero una valoración'; });
+      .finally(function () { btn.disabled = false; btn.textContent = 'Quiero el estudio gratuito'; });
   });
 })();
 </script>
