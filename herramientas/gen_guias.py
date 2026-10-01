@@ -422,9 +422,7 @@ def page(depth, url, title, desc, side_current, body, jsonld):
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#0E2A47">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Manrope:wght@500&family=Schibsted+Grotesk:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="{up}assets/fonts/fonts.css">
 <link rel="stylesheet" href="{up}assets/legal.css">
 <link rel="stylesheet" href="{up}assets/guias.css">
 {ld}
@@ -471,6 +469,17 @@ CTA = '''
       <a class="btn" href="{up}#contacto">Comprobar si mi empresa puede pedirlo</a>
     </aside>'''
 
+def relacionados(slug):
+    otras = [x for x in GUIAS if x["slug"] != slug][:3]
+    li = "".join(f'\n      <li><a href="../{x["slug"]}/">{x["titulo"]}</a></li>' for x in otras)
+    return f'''
+    <nav class="relacionados" aria-label="Sigue leyendo">
+      <p class="eyebrow">Sigue leyendo</p>
+      <ul>{li}
+      <li><a href="../../blog/">Artículos del blog sobre ICO Crecimiento</a></li>
+      </ul>
+    </nav>'''
+
 for g in GUIAS:
     url = f"{SITE}/guias/{g['slug']}/"
     faq_html = "".join(f"\n    <h3>{q}</h3>\n    <p>{a}</p>" for q, a in g["faqs"])
@@ -485,6 +494,7 @@ for g in GUIAS:
     <h2>Preguntas frecuentes</h2>
     <div class="faq-guia">{faq_html}
     </div>
+{relacionados(g["slug"])}
 {CTA.format(up="../../")}'''
     jsonld = [
         {"@context": "https://schema.org", "@type": "Article", "headline": g["titulo"], "description": g["desc"],

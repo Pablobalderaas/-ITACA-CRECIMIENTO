@@ -42,3 +42,10 @@
 .guia-list p { margin: 0; }
 
 .legal-body .faq-guia h3 { margin-top: 24px; }
+
+.relacionados { margin: 48px 0 0; padding-top: 24px; border-top: 1px solid var(--line); max-width: 68ch; }
+.relacionados .eyebrow { margin-bottom: 12px; }
+.legal-body .relacionados ul { list-style: none; padding: 0; margin: 0; }
+.legal-body .relacionados li { margin: 0; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.relacionados a { font-weight: 600; text-decoration: none; }
+.relacionados a::after { content: " →"; color: var(--terra); }

@@ -275,9 +275,7 @@ def page(depth, url, title, desc, current, body, jsonld, og_type="article"):
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#0E2A47">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Manrope:wght@500&family=Schibsted+Grotesk:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="{up}assets/fonts/fonts.css">
 <link rel="stylesheet" href="{up}assets/legal.css">
 <link rel="stylesheet" href="{up}assets/guias.css">
 {ld}
@@ -321,6 +319,20 @@ CTA = '''
       <a class="btn" href="{up}#contacto">Comprobar si mi empresa puede pedirlo</a>
     </aside>'''
 
+GUIAS_CLAVE = [("ico-crecimiento", "ICO Crecimiento: qué es, requisitos y cómo solicitarlo"),
+               ("ico-crecimiento-circulante", "ICO Crecimiento para circulante")]
+
+def relacionados(slug):
+    otros = [x for x in POSTS if x["slug"] != slug][:2]
+    li = "".join(f'\n      <li><a href="../{x["slug"]}/">{x["titulo"]}</a></li>' for x in otros)
+    li += "".join(f'\n      <li><a href="../../guias/{s_}/">{t}</a></li>' for s_, t in GUIAS_CLAVE)
+    return f'''
+    <nav class="relacionados" aria-label="Sigue leyendo">
+      <p class="eyebrow">Sigue leyendo</p>
+      <ul>{li}
+      </ul>
+    </nav>'''
+
 for p in POSTS:
     url = f"{SITE}/blog/{p['slug']}/"
     faq_html = "".join(f"\n    <h3>{q}</h3>\n    <p>{a}</p>" for q, a in p["faqs"])
@@ -335,6 +347,7 @@ for p in POSTS:
     <h2>Preguntas frecuentes</h2>
     <div class="faq-guia">{faq_html}
     </div>
+{relacionados(p["slug"])}
 {CTA.format(up="../../")}'''
     jsonld = [
         {"@context": "https://schema.org", "@type": "BlogPosting", "headline": p["titulo"], "description": p["desc"],
