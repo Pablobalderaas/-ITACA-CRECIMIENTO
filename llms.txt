@@ -12,7 +12,10 @@
 - Desde 50.000 €, sin importe máximo fijado.
 - Circulante: hasta 5 años con hasta 1 de carencia, hasta el 100 % de la necesidad.
 - Inversión: hasta 10 años con hasta 2 de carencia, hasta el 80 % de la inversión.
-- Tipo: Euríbor más un diferencial de entre 0,75 % y 1,75 %, según el riesgo. Comisión de apertura del 0,5 %.
+- Solo para sociedades pyme (no autónomos ni comunidades de bienes) sin pérdidas en los dos últimos ejercicios, con patrimonio neto positivo, sin impagos en la CIRBE y al corriente con Hacienda y la Seguridad Social.
+- Tipo: Euríbor a 12 meses + 1,75 %, que baja al 1,25 % o al 0,75 % con aval. Comisión de apertura del 0,5 %.
+- Se pueden financiar gastos de hasta 12 meses antes de la solicitud y la cancelación de deuda a corto plazo. No se financian camiones de transporte de mercancías.
+- Se concede por orden de llegada hasta agotar los 1.000 millones de euros.
 - Los gastos de consultoría y calificación crediticia necesarios para solicitar el préstamo son financiables, hasta el 100 %: los honorarios de Ítaca Crecimiento pueden incluirse en la operación.
 - Para pymes con actividad en España, al menos 4 años de antigüedad y cuentas auditadas de los dos últimos ejercicios o un aval público (por ejemplo, de una SGR).
 - Solicitudes hasta el 31 de diciembre de 2027 o hasta agotar los fondos.
@@ -39,4 +42,4 @@
 - [ICO Crecimiento o préstamo bancario: cuál le conviene a tu pyme](https://itacacrecimiento.com/blog/ico-crecimiento-o-prestamo-bancario/)
 - [Qué se puede financiar con ICO Crecimiento](https://itacacrecimiento.com/blog/que-se-puede-financiar-con-ico-crecimiento/)
 - [ICO Crecimiento para empresas de transporte](https://itacacrecimiento.com/blog/ico-crecimiento-empresas-de-transporte/)
-- [7 errores al solicitar ICO Crecimiento](https://itacacrecimiento.com/blog/errores-al-solicitar-ico-crecimiento/)
+- [9 errores al solicitar ICO Crecimiento](https://itacacrecimiento.com/blog/errores-al-solicitar-ico-crecimiento/)

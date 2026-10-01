@@ -124,10 +124,26 @@
     },
     {
       "@type": "Question",
+      "name": "¿Se puede usar para pagar deudas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En parte. Dentro del circulante se puede financiar la cancelación de deuda a corto plazo, tanto con proveedores como con bancos. La deuda a largo plazo no es la finalidad de la línea."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "¿Quién puede solicitarlo?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Pymes con actividad en España, con al menos cuatro años de antigüedad y cuentas anuales auditadas de los dos últimos ejercicios o un aval público, que presenten un proyecto de crecimiento viable. En el diagnóstico comprobamos si tu empresa cumple todos los requisitos."
+        "text": "Pymes constituidas como sociedad y con actividad en España, con al menos cuatro años de antigüedad y cuentas anuales auditadas de los dos últimos ejercicios o un aval público, que presenten un proyecto de crecimiento viable. En el diagnóstico comprobamos si tu empresa cumple todos los requisitos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puede solicitarlo un autónomo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. ICO Crecimiento es solo para pymes constituidas como sociedad (SL, SA…). Los autónomos y las comunidades de bienes no pueden ser beneficiarios. Si eres autónomo, cuéntanos tu caso y te orientamos hacia otras líneas del ICO."
       }
     },
     {
@@ -151,7 +167,7 @@
       "name": "¿Cuánto puedo pedir y a qué plazo?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Desde 50.000 €, sin un importe máximo fijado, a un plazo de hasta 10 años con hasta 2 años de carencia en las operaciones de inversión. El tipo de interés es el Euríbor más un diferencial de entre el 0,75 % y el 1,75 %, según el riesgo."
+        "text": "Desde 50.000 €, sin un importe máximo fijado. Para circulante, hasta el 100 % de la necesidad a un plazo de hasta 5 años con 1 de carencia; para inversión, hasta el 80 % a un plazo de hasta 10 años con 2 de carencia. El tipo es el Euríbor a 12 meses más un 1,75 %, que baja al 1,25 % o al 0,75 % si la operación lleva aval, con una comisión de apertura del 0,5 %."
       }
     },
     {
@@ -159,7 +175,7 @@
       "name": "¿Hasta cuándo se puede solicitar?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Hasta el 31 de diciembre de 2027 o hasta que se agoten los fondos. Como los fondos son limitados, conviene no dejarlo para el final."
+        "text": "Hasta el 31 de diciembre de 2027 o hasta que se agoten los 1.000 millones de la línea. Las solicitudes se atienden por orden de llegada, así que cuanto antes se presente, mejor."
       }
     },
     {
@@ -405,6 +421,7 @@
   .requisitos .eyebrow { margin-bottom: 20px; }
   .requisitos .h2 { margin-bottom: 56px; max-width: 720px; }
   .requisitos .paso .n { font-size: 32px; }
+  .requisitos .pasos { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
   .requisitos-nota { margin-top: 48px; max-width: 640px; font-size: 16px; line-height: 1.7; color: var(--text-2); }
   .linea h3 a { color: inherit; }
   .linea h3 a:hover { color: var(--terra); }
@@ -598,13 +615,14 @@
       <p>La primera línea de financiación directa y 100 % digital del Instituto de Crédito Oficial, con una dotación inicial de 1.000 millones de euros para pymes con potencial de crecimiento.</p>
     </div>
     <div class="lineas-list">
-      <div class="linea"><span class="n">Circulante</span><h3>Hasta 5 años, 1 de carencia</h3><p>Para pagar proveedores, nóminas o existencias mientras cobras a tus clientes. Financia hasta el 100 % de la necesidad. <a href="guias/ico-crecimiento-circulante/" style="text-decoration:underline">Guía de circulante</a>.</p></div>
-      <div class="linea"><span class="n">Inversión</span><h3>Hasta 10 años, 2 de carencia</h3><p>Activos materiales, inmateriales o financieros, con especial encaje para intangibles: software, I+D, marcas o digitalización. Financia hasta el 80 % de la inversión.</p></div>
+      <div class="linea"><span class="n">Circulante</span><h3>Hasta 5 años, 1 de carencia</h3><p>Para pagar proveedores, nóminas o existencias mientras cobras a tus clientes, e incluso para cancelar deuda a corto plazo. Financia hasta el 100 % de la necesidad. <a href="guias/ico-crecimiento-circulante/" style="text-decoration:underline">Guía de circulante</a>.</p></div>
+      <div class="linea"><span class="n">Inversión</span><h3>Hasta 10 años, 2 de carencia</h3><p>Maquinaria, instalaciones, naves, renovables para autoconsumo y, sobre todo, intangibles: software, I+D, marcas, formación o apertura de nuevos mercados. Financia hasta el 80 % de la inversión. Quedan fuera los camiones de transporte de mercancías.</p></div>
       <div class="linea"><span class="n">Importe</span><h3>Desde 50.000 €</h3><p>Sin importe máximo fijado. El importe viable depende de la necesidad y de la situación de la empresa.</p></div>
-      <div class="linea"><span class="n">Coste</span><h3>Euríbor + 0,75 % a 1,75 %</h3><p>El diferencial depende del riesgo de la operación. Comisión de apertura del 0,5 %.</p></div>
+      <div class="linea"><span class="n">Coste</span><h3>Euríbor + 1,75 %</h3><p>Euríbor a 12 meses (si es negativo, cuenta como 0 %) más un margen del 1,75 %, que baja al 1,25 % o al 0,75 % si la operación lleva aval. Comisión de apertura del 0,5 % y sin comisión por lo que no se disponga.</p></div>
+      <div class="linea"><span class="n">Retroactivo</span><h3>Gastos de hasta 12 meses antes</h3><p>Se pueden financiar inversiones y gastos realizados o iniciados en los 12 meses anteriores a la solicitud. Si ya has invertido, puedes recuperar esa liquidez.</p></div>
       <div class="linea"><span class="n">Sin banco</span><h3>Directo con el ICO</h3><p>La solicitud se presenta en la plataforma ICO Online, con certificado digital o Cl@ve, y es el propio ICO quien analiza y concede el préstamo.</p></div>
       <div class="linea"><span class="n">Consultoría</span><h3>Nuestros honorarios, financiables</h3><p>La normativa de la línea considera financiables los gastos de consultoría y calificación crediticia necesarios para solicitar el préstamo, hasta el 100 %. Es decir, nuestros honorarios pueden incluirse en la propia operación.</p></div>
-      <div class="linea"><span class="n">Hasta</span><h3>31 de diciembre de 2027</h3><p>O hasta que se agoten los fondos disponibles.</p></div>
+      <div class="linea"><span class="n">Plazo</span><h3>Hasta el 31 de diciembre de 2027</h3><p>Pero se concede por orden de llegada hasta agotar los 1.000 millones: las solicitudes no compiten entre sí, se atienden según se presentan. Cuanto antes, mejor.</p></div>
     </div>
     <p class="nota-datos">Condiciones según la información pública del ICO a septiembre de 2026. Pueden cambiar: las vigentes son las publicadas en <a href="https://www.ico.es" rel="noopener">ico.es</a>. <a href="guias/ico-crecimiento/">Guía completa de ICO Crecimiento</a>.</p>
   </section>
@@ -614,9 +632,11 @@
       <p class="eyebrow">Requisitos</p>
       <h2 class="h2" id="requisitos-title">¿Puede solicitarlo tu empresa?</h2>
       <ul class="pasos" style="list-style:none;margin:0;padding:0">
-        <li class="paso"><span class="n" aria-hidden="true">✓</span><h3>Ser pyme con actividad en España</h3><p>Con domicilio social, establecimiento o sucursal de actividad en España.</p></li>
+        <li class="paso"><span class="n" aria-hidden="true">✓</span><h3>Ser una pyme constituida como sociedad</h3><p>SL, SA u otra sociedad mercantil con actividad en España. Los autónomos y las comunidades de bienes no pueden solicitarlo.</p></li>
         <li class="paso"><span class="n" aria-hidden="true">✓</span><h3>Al menos 4 años de antigüedad</h3><p>La línea está pensada para empresas con trayectoria que quieren dar el siguiente paso.</p></li>
         <li class="paso"><span class="n" aria-hidden="true">✓</span><h3>Cuentas auditadas o aval de SGR</h3><p>Cuentas anuales auditadas de los dos últimos ejercicios. Si no las tienes, no pasa nada: la operación se respalda con el aval de una sociedad de garantía recíproca (SGR), que se tramita a través del propio ICO. <a href="guias/aval-sgr/" style="text-decoration:underline">Cómo funciona</a>.</p></li>
+        <li class="paso"><span class="n" aria-hidden="true">✓</span><h3>Cuentas sanas</h3><p>Sin pérdidas en los dos últimos ejercicios y con patrimonio neto positivo.</p></li>
+        <li class="paso"><span class="n" aria-hidden="true">✓</span><h3>Al corriente de pagos</h3><p>Con Hacienda y la Seguridad Social, y sin impagos con bancos en la CIRBE.</p></li>
         <li class="paso"><span class="n" aria-hidden="true">✓</span><h3>Un proyecto de crecimiento viable</h3><p>Hay que explicar qué se financia, qué resultados se esperan y cómo se devolverá el préstamo.</p></li>
       </ul>
       <p class="requisitos-nota"><a href="test-ico-crecimiento/" style="text-decoration:underline;font-weight:600">Haz el test gratuito</a> y descubre en un minuto si tu empresa cumple los requisitos. ¿No cumples alguno? Cuéntanos tu caso: revisamos si hay forma de cumplirlo, como un aval de SGR, o qué otra línea del ICO encaja mejor con tu empresa.</p>
@@ -666,7 +686,7 @@
     <div class="lineas-list">
       <div class="linea"><span class="n">Blog</span><h3><a href="blog/ico-crecimiento-o-prestamo-bancario/">ICO Crecimiento o préstamo bancario: cuál te conviene</a></h3><p>Diferencias, ventajas de cada uno y cuándo combinarlos.</p></div>
       <div class="linea"><span class="n">Blog</span><h3><a href="blog/ico-crecimiento-empresas-de-transporte/">ICO Crecimiento para empresas de transporte</a></h3><p>Financiar el gasoil y las nóminas mientras cobras, o renovar la flota.</p></div>
-      <div class="linea"><span class="n">Blog</span><h3><a href="blog/errores-al-solicitar-ico-crecimiento/">7 errores al solicitar ICO Crecimiento</a></h3><p>Lo que más retrasa las solicitudes y cómo evitarlo.</p></div>
+      <div class="linea"><span class="n">Blog</span><h3><a href="blog/errores-al-solicitar-ico-crecimiento/">9 errores al solicitar ICO Crecimiento</a></h3><p>Lo que más retrasa las solicitudes y cómo evitarlo.</p></div>
     </div>
   </section>
 
@@ -685,36 +705,44 @@
         <p class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1" hidden>Para las dos cosas. ICO Crecimiento financia circulante (proveedores, nóminas, existencias o el desfase entre pagar y cobrar) a un plazo de hasta 5 años con 1 de carencia, e inversiones a un plazo de hasta 10 años con 2 de carencia. Lo explicamos en la <a href="guias/ico-crecimiento-circulante/" style="text-decoration:underline">guía de circulante</a>.</p>
       </div>
       <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-2" id="faq-q-2"><span>¿Quién puede solicitarlo?</span><span class="icon" aria-hidden="true">+</span></button>
-        <p class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-q-2" hidden>Pymes con actividad en España, con al menos cuatro años de antigüedad y cuentas anuales auditadas de los dos últimos ejercicios o un aval público, que presenten un proyecto de crecimiento viable. En el diagnóstico comprobamos si tu empresa cumple todos los requisitos.</p>
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-2" id="faq-q-2"><span>¿Se puede usar para pagar deudas?</span><span class="icon" aria-hidden="true">+</span></button>
+        <p class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-q-2" hidden>En parte. Dentro del circulante se puede financiar la cancelación de deuda a corto plazo, tanto con proveedores como con bancos. La deuda a largo plazo no es la finalidad de la línea.</p>
       </div>
       <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-3" id="faq-q-3"><span>¿Qué pasa si mis cuentas no están auditadas?</span><span class="icon" aria-hidden="true">+</span></button>
-        <p class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-q-3" hidden>No es un problema. En ese caso la operación se respalda con el aval de una sociedad de garantía recíproca (SGR), que se tramita a través del propio ICO junto con la solicitud, y nosotros lo coordinamos por ti. Lo explicamos en nuestra <a href="guias/aval-sgr/" style="text-decoration:underline">guía del aval de SGR</a>.</p>
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-3" id="faq-q-3"><span>¿Quién puede solicitarlo?</span><span class="icon" aria-hidden="true">+</span></button>
+        <p class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-q-3" hidden>Pymes constituidas como sociedad y con actividad en España, con al menos cuatro años de antigüedad y cuentas anuales auditadas de los dos últimos ejercicios o un aval público, que presenten un proyecto de crecimiento viable. En el diagnóstico comprobamos si tu empresa cumple todos los requisitos.</p>
       </div>
       <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-4" id="faq-q-4"><span>¿Necesito ir a mi banco?</span><span class="icon" aria-hidden="true">+</span></button>
-        <p class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4" hidden>No. En ICO Crecimiento no hay banco intermediario: la solicitud, el análisis y la firma se hacen directamente con el ICO a través de ICO Online, con el certificado digital de la empresa o Cl@ve.</p>
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-4" id="faq-q-4"><span>¿Puede solicitarlo un autónomo?</span><span class="icon" aria-hidden="true">+</span></button>
+        <p class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4" hidden>No. ICO Crecimiento es solo para pymes constituidas como sociedad (SL, SA…). Los autónomos y las comunidades de bienes no pueden ser beneficiarios. Si eres autónomo, cuéntanos tu caso y te orientamos hacia otras líneas del ICO.</p>
       </div>
       <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-5" id="faq-q-5"><span>¿Cuánto puedo pedir y a qué plazo?</span><span class="icon" aria-hidden="true">+</span></button>
-        <p class="faq-a" id="faq-a-5" role="region" aria-labelledby="faq-q-5" hidden>Desde 50.000 €, sin un importe máximo fijado, a un plazo de hasta 10 años con hasta 2 años de carencia en las operaciones de inversión. El tipo de interés es el Euríbor más un diferencial de entre el 0,75 % y el 1,75 %, según el riesgo.</p>
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-5" id="faq-q-5"><span>¿Qué pasa si mis cuentas no están auditadas?</span><span class="icon" aria-hidden="true">+</span></button>
+        <p class="faq-a" id="faq-a-5" role="region" aria-labelledby="faq-q-5" hidden>No es un problema. En ese caso la operación se respalda con el aval de una sociedad de garantía recíproca (SGR), que se tramita a través del propio ICO junto con la solicitud, y nosotros lo coordinamos por ti. Lo explicamos en nuestra <a href="guias/aval-sgr/" style="text-decoration:underline">guía del aval de SGR</a>.</p>
       </div>
       <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-6" id="faq-q-6"><span>¿Hasta cuándo se puede solicitar?</span><span class="icon" aria-hidden="true">+</span></button>
-        <p class="faq-a" id="faq-a-6" role="region" aria-labelledby="faq-q-6" hidden>Hasta el 31 de diciembre de 2027 o hasta que se agoten los fondos. Como los fondos son limitados, conviene no dejarlo para el final.</p>
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-6" id="faq-q-6"><span>¿Necesito ir a mi banco?</span><span class="icon" aria-hidden="true">+</span></button>
+        <p class="faq-a" id="faq-a-6" role="region" aria-labelledby="faq-q-6" hidden>No. En ICO Crecimiento no hay banco intermediario: la solicitud, el análisis y la firma se hacen directamente con el ICO a través de ICO Online, con el certificado digital de la empresa o Cl@ve.</p>
       </div>
       <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-7" id="faq-q-7"><span>¿El estudio inicial tiene coste?</span><span class="icon" aria-hidden="true">+</span></button>
-        <p class="faq-a" id="faq-a-7" role="region" aria-labelledby="faq-q-7" hidden>No. Antes de empezar hacemos un estudio gratuito y sin compromiso en el que te decimos si la operación es viable, cuánto conviene pedir y qué puntos hay que reforzar. Con eso decides si quieres que preparemos la solicitud.</p>
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-7" id="faq-q-7"><span>¿Cuánto puedo pedir y a qué plazo?</span><span class="icon" aria-hidden="true">+</span></button>
+        <p class="faq-a" id="faq-a-7" role="region" aria-labelledby="faq-q-7" hidden>Desde 50.000 €, sin un importe máximo fijado. Para circulante, hasta el 100 % de la necesidad a un plazo de hasta 5 años con 1 de carencia; para inversión, hasta el 80 % a un plazo de hasta 10 años con 2 de carencia. El tipo es el Euríbor a 12 meses más un 1,75 %, que baja al 1,25 % o al 0,75 % si la operación lleva aval, con una comisión de apertura del 0,5 %.</p>
       </div>
       <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-8" id="faq-q-8"><span>¿Se pueden financiar vuestros honorarios?</span><span class="icon" aria-hidden="true">+</span></button>
-        <p class="faq-a" id="faq-a-8" role="region" aria-labelledby="faq-q-8" hidden>Sí. La normativa de la línea considera financiables los gastos de consultoría y calificación crediticia necesarios para solicitar el préstamo, hasta el 100 %. Es decir, nuestros honorarios pueden incluirse en la propia operación.</p>
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-8" id="faq-q-8"><span>¿Hasta cuándo se puede solicitar?</span><span class="icon" aria-hidden="true">+</span></button>
+        <p class="faq-a" id="faq-a-8" role="region" aria-labelledby="faq-q-8" hidden>Hasta el 31 de diciembre de 2027 o hasta que se agoten los 1.000 millones de la línea. Las solicitudes se atienden por orden de llegada, así que cuanto antes se presente, mejor.</p>
       </div>
       <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-9" id="faq-q-9"><span>¿Me garantizáis que me lo concedan?</span><span class="icon" aria-hidden="true">+</span></button>
-        <p class="faq-a" id="faq-a-9" role="region" aria-labelledby="faq-q-9" hidden>No. La decisión la toma siempre el ICO. Lo que hacemos es que tu solicitud llegue completa, coherente y bien argumentada, y te avisamos antes si vemos algo que pueda jugar en contra.</p>
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-9" id="faq-q-9"><span>¿El estudio inicial tiene coste?</span><span class="icon" aria-hidden="true">+</span></button>
+        <p class="faq-a" id="faq-a-9" role="region" aria-labelledby="faq-q-9" hidden>No. Antes de empezar hacemos un estudio gratuito y sin compromiso en el que te decimos si la operación es viable, cuánto conviene pedir y qué puntos hay que reforzar. Con eso decides si quieres que preparemos la solicitud.</p>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-10" id="faq-q-10"><span>¿Se pueden financiar vuestros honorarios?</span><span class="icon" aria-hidden="true">+</span></button>
+        <p class="faq-a" id="faq-a-10" role="region" aria-labelledby="faq-q-10" hidden>Sí. La normativa de la línea considera financiables los gastos de consultoría y calificación crediticia necesarios para solicitar el préstamo, hasta el 100 %. Es decir, nuestros honorarios pueden incluirse en la propia operación.</p>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-11" id="faq-q-11"><span>¿Me garantizáis que me lo concedan?</span><span class="icon" aria-hidden="true">+</span></button>
+        <p class="faq-a" id="faq-a-11" role="region" aria-labelledby="faq-q-11" hidden>No. La decisión la toma siempre el ICO. Lo que hacemos es que tu solicitud llegue completa, coherente y bien argumentada, y te avisamos antes si vemos algo que pueda jugar en contra.</p>
       </div>
     </div>
   </section>

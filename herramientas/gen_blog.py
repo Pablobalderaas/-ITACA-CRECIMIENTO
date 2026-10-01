@@ -43,7 +43,7 @@ cuerpo=NOTA_ICO + """
     <tr><td>Importe mínimo</td><td>50.000 €</td><td>Sin mínimo general</td></tr>
     <tr><td>Plazo circulante</td><td>Hasta 5 años, con 1 de carencia</td><td>Pólizas que se suelen renovar cada año</td></tr>
     <tr><td>Plazo inversión</td><td>Hasta 10 años, con 2 de carencia</td><td>Según el banco y la garantía</td></tr>
-    <tr><td>Tipo de interés</td><td>Euríbor + 0,75 % a 1,75 %</td><td>Según el banco y el cliente</td></tr>
+    <tr><td>Tipo de interés</td><td>Euríbor + 1,75 % (menos con aval)</td><td>Según el banco y el cliente</td></tr>
     <tr><td>Requisitos</td><td>4 años de antigüedad y cuentas auditadas o aval público</td><td>Los que fije el banco</td></tr>
   </tbody>
 </table>
@@ -100,7 +100,7 @@ cuerpo=NOTA_ICO + """
 <h2>Inversión en activos materiales</h2>
 <ul>
   <li>Maquinaria y equipos de producción.</li>
-  <li>Vehículos y renovación de flota.</li>
+  <li>Vehículos industriales de la actividad, excepto camiones de transporte de mercancías por carretera, que están excluidos.</li>
   <li>Reforma o ampliación de naves, locales y oficinas.</li>
   <li>Instalaciones: cámaras de frío, placas solares, climatización.</li>
   <li>Equipos informáticos.</li>
@@ -115,8 +115,8 @@ cuerpo=NOTA_ICO + """
   <li>Digitalización: comercio electrónico, programas de gestión, automatización.</li>
 </ul>
 
-<h2>Inversión en activos financieros</h2>
-<p>La línea también contempla activos financieros. Si tu proyecto pasa por una operación de este tipo, conviene revisar con detalle cómo encaja en las condiciones vigentes antes de plantearla.</p>
+<h2>Compra de participaciones</h2>
+<p>También se puede financiar, hasta el 80 %, la compra de participaciones o acciones de una empresa, pero solo para fines concretos: el relevo generacional en la empresa familiar, ganar capacidad productiva, mejorar el acceso a la financiación o asegurarse suministros clave. Si tu proyecto pasa por una operación de este tipo, conviene revisar con detalle cómo encaja en las condiciones vigentes antes de plantearla.</p>
 
 <h2>Cuánto financia</h2>
 <dl class="data-list">
@@ -126,11 +126,12 @@ cuerpo=NOTA_ICO + """
 </dl>
 
 <h2>¿Y si mi necesidad es otra?</h2>
-<p>Si lo que necesitas no aparece aquí, por ejemplo reorganizar deudas que ya tienes, confirma antes si encaja en las condiciones vigentes de la línea. En el diagnóstico inicial lo revisamos contigo.</p>
+<p>Dos detalles que mucha gente no conoce: dentro del circulante se puede financiar la <strong>cancelación de deuda a corto plazo</strong>, y se admiten <strong>gastos e inversiones de hasta 12 meses antes</strong> de la solicitud, así que si ya has invertido puedes recuperar esa liquidez. Si lo que necesitas no aparece aquí, en el estudio inicial lo revisamos contigo.</p>
 """,
 faqs=[
 ("¿ICO Crecimiento financia software y digitalización?", "Sí. Financia activos inmateriales como el desarrollo de software, la I+D, las marcas o la digitalización, que son justamente lo que peor financia el banco."),
-("¿ICO Crecimiento financia vehículos?", "Sí, los vehículos son activos materiales y pueden financiarse como inversión, hasta el 80 % y a un plazo de hasta 10 años."),
+("¿ICO Crecimiento financia vehículos?", "Sí, los vehículos industriales de la actividad, hasta el 80 % y a un plazo de hasta 10 años. Se excluyen los camiones de transporte de mercancías por carretera."),
+("¿Se pueden financiar gastos que ya he pagado?", "Sí, los gastos e inversiones realizados o iniciados hasta 12 meses antes de la solicitud."),
 ("¿Qué parte de la inversión cubre ICO Crecimiento?", "Hasta el 80 % en las operaciones de inversión y hasta el 100 % en las de circulante."),
 ],
 ))
@@ -139,28 +140,32 @@ faqs=[
 POSTS.append(dict(
 slug="ico-crecimiento-empresas-de-transporte",
 fecha="2026-09-30",
-titulo="ICO Crecimiento para empresas de transporte: circulante y renovación de flota",
+titulo="ICO Crecimiento para empresas de transporte: cómo financiar el circulante",
 seo="ICO Crecimiento para empresas de transporte y logística",
-desc="Cómo pueden usar ICO Crecimiento las empresas de transporte: financiar el gasoil y las nóminas mientras cobran, renovar la flota o invertir en naves y digitalización.",
+desc="Cómo pueden usar ICO Crecimiento las empresas de transporte: financiar el gasoil y las nóminas mientras cobran, cancelar deuda a corto plazo o invertir en naves y digitalización. Los camiones no se financian.",
 resumen="""<p>Las empresas de transporte son de las que más pueden aprovechar ICO Crecimiento:</p>
 <ul>
   <li><strong>Circulante:</strong> pagan gasoil, peajes y nóminas al momento y cobran a 60 o 90 días. ICO Crecimiento financia ese desfase a 5 años con 1 de carencia.</li>
-  <li><strong>Inversión:</strong> renovación de flota, vehículos de bajas emisiones, naves, cámaras de frío o digitalización, a 10 años con 2 de carencia.</li>
+  <li><strong>Inversión:</strong> naves, cámaras de frío, talleres, placas solares o digitalización, a 10 años con 2 de carencia. <strong>Ojo:</strong> la compra de camiones de transporte de mercancías está excluida.</li>
   <li>Encaja sobre todo en empresas con flota mediana o grande, al menos 4 años de actividad y cuentas auditadas o aval de SGR.</li>
 </ul>""",
 cuerpo=NOTA_ICO + """
 <h2>El problema de siempre: pagar antes de cobrar</h2>
 <p>En transporte, la mayoría de gastos se pagan al contado: gasoil, peajes, nóminas de los conductores, mantenimiento y seguros. En cambio, los cargadores suelen pagar a 60 o 90 días, y a veces más. Cuanto más crece la empresa, más dinero tiene que adelantar.</p>
-<p>Normalmente ese hueco se cubre con pólizas de crédito o descuento de facturas que el banco renueva cada año. ICO Crecimiento permite financiarlo a <strong>5 años con 1 de carencia</strong> y hasta el <strong>100 % de la necesidad</strong>, sin depender del banco.</p>
+<p>Normalmente ese hueco se cubre con pólizas de crédito o descuento de facturas que el banco renueva cada año. ICO Crecimiento permite financiarlo a <strong>5 años con 1 de carencia</strong> y hasta el <strong>100 % de la necesidad</strong>, sin depender del banco. Dentro del circulante se puede incluir también la cancelación de deuda a corto plazo, por ejemplo pólizas o proveedores, para pasar a un plazo más cómodo.</p>
 
 <h2>Inversiones que encajan</h2>
 <ul>
-  <li><strong>Renovación de flota</strong> y vehículos de bajas emisiones (eléctricos, gas), cada vez más necesarios por las zonas de bajas emisiones de las ciudades.</li>
   <li><strong>Naves y plataformas logísticas</strong>, almacenes y cámaras de frío.</li>
   <li><strong>Digitalización:</strong> programas de gestión de transporte, localización de flota, planificación de rutas.</li>
   <li><strong>Talleres propios</strong> y equipamiento de mantenimiento.</li>
+  <li><strong>Placas solares</strong> para autoconsumo en naves y bases.</li>
+  <li><strong>Formación</strong> del equipo y apertura de nuevos mercados o rutas.</li>
 </ul>
-<p>Para inversión, el plazo llega a <strong>10 años con 2 de carencia</strong> y se financia hasta el <strong>80 %</strong>. Si solo vas a comprar camiones, compara también con el leasing o la financiación del fabricante: a veces es más sencillo. ICO Crecimiento destaca cuando el proyecto es más amplio o cuando el banco no quiere asumir más riesgo.</p>
+<p>Para inversión, el plazo llega a <strong>10 años con 2 de carencia</strong> y se financia hasta el <strong>80 %</strong>.</p>
+
+<h2>Lo que no se puede financiar: los camiones</h2>
+<p>Las condiciones de ICO Crecimiento excluyen expresamente la compra de vehículos de transporte de mercancías por carretera. Para renovar la flota de camiones hay que recurrir a otras vías, como el leasing, la financiación del fabricante o las ayudas específicas para flotas. Lo que sí puede hacer ICO Crecimiento es aliviar la tesorería: si el circulante deja de ahogar a la empresa, es más fácil afrontar la renovación de la flota por otra vía.</p>
 
 <h2>Qué empresas de transporte encajan</h2>
 <ul>
@@ -179,9 +184,9 @@ cuerpo=NOTA_ICO + """
 </ol>
 """,
 faqs=[
-("¿Una empresa de transporte puede pedir ICO Crecimiento?", "Sí, si es una pyme con al menos 4 años de actividad y cuentas auditadas de los dos últimos ejercicios o un aval público, y necesita al menos 50.000 €."),
+("¿Una empresa de transporte puede pedir ICO Crecimiento?", "Sí, si es una sociedad pyme con al menos 4 años de actividad y cuentas auditadas de los dos últimos ejercicios o un aval público, y necesita al menos 50.000 €."),
 ("¿Se puede financiar el gasoil y las nóminas con ICO Crecimiento?", "Sí, como circulante: ICO Crecimiento financia el desfase entre pagar y cobrar a un plazo de hasta 5 años con 1 de carencia."),
-("¿Conviene ICO Crecimiento para comprar camiones?", "Puede convenir, sobre todo si forma parte de un proyecto más amplio o si el banco no quiere asumir más riesgo. Para una compra aislada, compáralo con el leasing o la financiación del fabricante."),
+("¿Se pueden comprar camiones con ICO Crecimiento?", "No. La compra de vehículos de transporte de mercancías por carretera está excluida de la línea. Sí se pueden financiar el circulante, las naves, los talleres, la digitalización o las placas solares."),
 ],
 ))
 
@@ -189,9 +194,9 @@ faqs=[
 POSTS.append(dict(
 slug="errores-al-solicitar-ico-crecimiento",
 fecha="2026-09-30",
-titulo="7 errores al solicitar ICO Crecimiento y cómo evitarlos",
-seo="7 errores al solicitar ICO Crecimiento (y cómo evitarlos)",
-desc="Los errores más frecuentes al pedir ICO Crecimiento: requisitos sin comprobar, certificado digital, importes desproporcionados, cifras que no cuadran y más.",
+titulo="9 errores al solicitar ICO Crecimiento y cómo evitarlos",
+seo="9 errores al solicitar ICO Crecimiento (y cómo evitarlos)",
+desc="Los errores más frecuentes al pedir ICO Crecimiento: requisitos sin comprobar, cifras que no cuadran, el cuestionario de sostenibilidad, los requerimientos del ICO y más.",
 resumen="""<p>La mayoría de solicitudes de ICO Crecimiento que se retrasan o no salen adelante fallan por lo mismo:</p>
 <ol>
   <li>No comprobar antes los requisitos.</li>
@@ -201,10 +206,12 @@ resumen="""<p>La mayoría de solicitudes de ICO Crecimiento que se retrasan o no
   <li>Presentar cifras que no cuadran.</li>
   <li>Olvidar deudas que aparecen en la CIRBE.</li>
   <li>Esperar al final del plazo.</li>
+  <li>Responder a la ligera el cuestionario de sostenibilidad.</li>
+  <li>No atender a tiempo los requerimientos del ICO.</li>
 </ol>""",
 cuerpo=NOTA_ICO + """
 <h2>1. No comprobar antes los requisitos</h2>
-<p>ICO Crecimiento pide al menos 4 años de antigüedad y cuentas auditadas de los dos últimos ejercicios o un aval público. Muchas empresas descubren a mitad del proceso que no auditan sus cuentas. Compruébalo antes de empezar y, si hace falta, estudia el <a href="../../guias/aval-sgr/">aval de una SGR</a>.</p>
+<p>ICO Crecimiento es solo para sociedades y pide, entre otras cosas, al menos 4 años de antigüedad, cuentas auditadas o un aval que las sustituya, no tener pérdidas en los dos últimos ejercicios ni patrimonio neto negativo y no tener impagos en la CIRBE. Basta con que falle uno para que la operación no salga. Muchas empresas descubren a mitad del proceso que no cumplen alguno. Compruébalo antes de empezar y, si hace falta, estudia el <a href="../../guias/aval-sgr/">aval de una SGR</a>.</p>
 
 <h2>2. Dejar el certificado digital para el final</h2>
 <p>La solicitud se presenta en ICO Online con el certificado digital de la empresa o Cl@ve. Obtener el certificado de representante de la empresa lleva unos días y exige acreditar el cargo. Tramítalo al principio.</p>
@@ -222,7 +229,13 @@ cuerpo=NOTA_ICO + """
 <p>El informe de la Central de Información de Riesgos del Banco de España muestra todos tus préstamos y avales. Pide tu informe antes de solicitar y asegúrate de que tu relación de deudas coincide con él.</p>
 
 <h2>7. Esperar al final del plazo</h2>
-<p>Las solicitudes se admiten hasta el 31 de diciembre de 2027 o hasta que se agoten los fondos. Con fondos limitados, esperar al último momento es arriesgarse a llegar tarde.</p>
+<p>Las solicitudes se admiten hasta el 31 de diciembre de 2027 o hasta que se agoten los 1.000 millones, y se atienden por estricto orden de llegada. No se comparan entre sí: llega antes quien antes presenta un expediente completo.</p>
+
+<h2>8. Responder a la ligera el cuestionario de sostenibilidad</h2>
+<p>El ICO puntúa de 0 a 6 un cuestionario sobre aspectos ambientales, sociales y de gobierno. Por debajo de 2 puntos hay que asumir un plan de mejora y, si no se cumple en 24 meses, el préstamo se encarece un 0,25 % anual. Muchas empresas puntúan bajo solo porque no tienen por escrito lo que ya hacen: conviene ordenar esa documentación antes de responder.</p>
+
+<h2>9. No atender a tiempo los requerimientos del ICO</h2>
+<p>Durante el análisis, el ICO puede pedir aclaraciones o documentos con plazos de respuesta de pocos días, a través del buzón electrónico. Si no se responde a tiempo, la solicitud puede decaer. Revisa el buzón a diario mientras dure el proceso.</p>
 
 <h2>Cómo evitarlos</h2>
 <p>La lista de documentos está en la guía de <a href="../../guias/documentacion-prestamo-ico/">documentación para un préstamo ICO</a>, y las condiciones completas en la guía de <a href="../../guias/ico-crecimiento/">ICO Crecimiento</a>. Si prefieres no arriesgarte, en Ítaca Crecimiento revisamos tu caso y preparamos la solicitud completa.</p>

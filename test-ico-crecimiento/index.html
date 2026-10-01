@@ -126,11 +126,12 @@
 
     <form class="test" id="test" novalidate>
       <fieldset class="q" data-q="pyme">
-        <legend><span class="num">1.</span>¿Tu empresa es una pyme?</legend>
-        <p class="hint">Menos de 250 empleados y una facturación de hasta 50 millones de euros (o un balance de hasta 43 millones).</p>
+        <legend><span class="num">1.</span>¿Tu empresa es una pyme constituida como sociedad (SL, SA…)?</legend>
+        <p class="hint">Pyme: menos de 250 empleados y una facturación de hasta 50 millones de euros (o un balance de hasta 43 millones), contando también el grupo si pertenece a uno.</p>
         <div class="opts">
           <label class="opt"><input type="radio" name="pyme" value="si"><span>Sí</span></label>
-          <label class="opt"><input type="radio" name="pyme" value="no"><span>No, es más grande</span></label>
+          <label class="opt"><input type="radio" name="pyme" value="autonomo"><span>No, soy autónomo o comunidad de bienes</span></label>
+          <label class="opt"><input type="radio" name="pyme" value="no"><span>No, es más grande que una pyme</span></label>
           <label class="opt"><input type="radio" name="pyme" value="nose"><span>No lo sé</span></label>
         </div>
       </fieldset>
@@ -257,7 +258,7 @@
 (function () {
   var Q = ['pyme', 'espana', 'antiguedad', 'auditadas', 'finalidad', 'importe', 'resultados', 'corriente'];
   var TXT = {
-    pyme: { si: 'Pyme: sí', no: 'Pyme: no', nose: 'Pyme: no lo sabe' },
+    pyme: { si: 'Pyme constituida como sociedad: sí', autonomo: 'Autónomo o comunidad de bienes', no: 'Más grande que una pyme', nose: 'Pyme: no lo sabe' },
     espana: { si: 'Actividad en España: sí', no: 'Actividad en España: no' },
     antiguedad: { '4mas': 'Antigüedad: 4 años o más', menos4: 'Antigüedad: menos de 4 años' },
     auditadas: { si: 'Cuentas auditadas: sí', no: 'Cuentas auditadas: no', nose: 'Cuentas auditadas: no lo sabe' },
@@ -275,7 +276,7 @@
 
   function condiciones(f) {
     var c = '<strong>Circulante:</strong> hasta el 100 % de la necesidad, a 5 años con 1 de carencia.';
-    var i = '<strong>Inversión:</strong> hasta el 80 % de la inversión, a 10 años con 2 de carencia.';
+    var i = '<strong>Inversión:</strong> hasta el 80 % de la inversión, a 10 años con 2 de carencia (los camiones de transporte de mercancías no se financian).';
     if (f === 'circulante') return [c];
     if (f === 'inversion') return [i];
     return [c, i];
@@ -298,6 +299,7 @@
     err.hidden = true;
 
     var bloqueos = [], avisos = [];
+    if (a.pyme === 'autonomo') bloqueos.push('ICO Crecimiento es solo para sociedades: los autónomos y las comunidades de bienes no pueden solicitarlo.');
     if (a.pyme === 'no') bloqueos.push('ICO Crecimiento es solo para pymes, y tu empresa supera ese tamaño.');
     if (a.espana === 'no') bloqueos.push('La empresa tiene que tener domicilio, establecimiento o sucursal de actividad en España.');
     if (a.antiguedad === 'menos4') bloqueos.push('La empresa necesita al menos 4 años de antigüedad.');
@@ -342,7 +344,7 @@
       estado = 'Buenas noticias';
       titulo = 'Tu empresa encaja en ICO Crecimiento';
       detalle = '<p>Según tus respuestas, cumples los requisitos principales. Las condiciones que te aplicarían:</p>' + li(condiciones(a.finalidad)) +
-        '<p>Desde 50.000 €, a Euríbor más un diferencial de entre el 0,75 % y el 1,75 %, y sin pasar por el banco.</p>' + notasHtml;
+        '<p>Desde 50.000 €, a Euríbor más un 1,75 % (o menos si la operación lleva aval), y sin pasar por el banco. La línea se concede por orden de llegada, así que conviene no esperar.</p>' + notasHtml;
       asunto = 'Test ICO Crecimiento: encaja';
       leadTitle = 'Siguiente paso: preparar tu solicitud';
     }
