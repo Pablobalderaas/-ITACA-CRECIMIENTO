@@ -303,12 +303,12 @@
     if (a.antiguedad === 'menos4') bloqueos.push('La empresa necesita al menos 4 años de antigüedad.');
 
     if (a.resultados === 'pnnegativo') bloqueos.push('Con patrimonio neto negativo es muy difícil acceder a financiación pública: estas líneas suelen excluir a las empresas en situación de crisis. A veces se puede corregir antes de solicitar, por ejemplo con una ampliación de capital.');
+    if (a.resultados === 'perdidas2') bloqueos.push('Con pérdidas en los dos últimos ejercicios no se puede solicitar ICO Crecimiento. Podrás pedirlo cuando la empresa vuelva a tener beneficios.');
     if (a.corriente === 'deudas') bloqueos.push('Hay que estar al corriente con Hacienda y la Seguridad Social. Si pagas la deuda o consigues un aplazamiento y lo cumples, podrás solicitarlo.');
 
     if (a.pyme === 'nose') avisos.push('Comprueba que tu empresa es pyme: menos de 250 empleados y hasta 50 millones de facturación o 43 de balance.');
     if (a.auditadas === 'no') avisos.push('Sin cuentas auditadas, necesitarás un aval público, por ejemplo de una <a href="../guias/aval-sgr/">sociedad de garantía recíproca (SGR)</a>.');
     if (a.auditadas === 'nose') avisos.push('Comprueba si tus cuentas están auditadas. Si no lo están, la alternativa es un <a href="../guias/aval-sgr/">aval de SGR</a>.');
-    if (a.resultados === 'perdidas2') avisos.push('Con pérdidas en los dos últimos ejercicios, el ICO mirará con especial atención la viabilidad. Habrá que explicar bien las causas y cómo vuelve la empresa a beneficios.');
     if (a.resultados === 'perdida1') avisos.push('Un ejercicio con pérdidas no impide solicitarlo, pero conviene explicar el motivo en la solicitud.');
     if (a.resultados === 'nose') avisos.push('Revisa en las cuentas anuales si ha habido pérdidas y si el patrimonio neto es positivo: es de lo primero que se analiza.');
     if (a.corriente === 'aplazada') avisos.push('Con deudas aplazadas, comprueba que los certificados de Hacienda y de la Seguridad Social salen «al corriente» antes de presentar la solicitud.');
@@ -321,7 +321,7 @@
       box.className = 'veredicto no';
       estado = 'Ahora mismo no encajas';
       titulo = 'Tu empresa no cumple algún requisito de ICO Crecimiento';
-      var corregible = a.resultados === 'pnnegativo' || a.corriente === 'deudas';
+      var corregible = a.resultados === 'pnnegativo' || a.resultados === 'perdidas2' || a.corriente === 'deudas';
       detalle = '<p>Según tus respuestas:</p>' + li(bloqueos) + (corregible
         ? '<p>Cuéntanos tu caso: te decimos qué habría que corregir y cuándo podrías solicitarlo.</p>'
         : '<p>Aun así, hay otras vías: líneas del ICO que se piden a través del banco, avales o financiación bancaria. Cuéntanos tu caso y te orientamos.</p>');
