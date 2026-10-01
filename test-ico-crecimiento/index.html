@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Test: ¿puede tu empresa pedir ICO Crecimiento? | Ítaca Crecimiento</title>
-<meta name="description" content="Responde 7 preguntas y descubre en un minuto si tu empresa cumple los requisitos de ICO Crecimiento, el préstamo directo del ICO para pymes. Gratis y sin registro.">
+<meta name="description" content="Responde 6 preguntas y descubre en un minuto si tu empresa cumple los requisitos de ICO Crecimiento, el préstamo directo del ICO para pymes. Gratis y sin registro.">
 <link rel="canonical" href="https://itacacrecimiento.com/test-ico-crecimiento/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ítaca Crecimiento">
 <meta property="og:locale" content="es_ES">
 <meta property="og:title" content="Test: ¿puede tu empresa pedir ICO Crecimiento?">
-<meta property="og:description" content="Responde 7 preguntas y descubre en un minuto si tu empresa cumple los requisitos de ICO Crecimiento.">
+<meta property="og:description" content="Responde 6 preguntas y descubre en un minuto si tu empresa cumple los requisitos de ICO Crecimiento.">
 <meta property="og:url" content="https://itacacrecimiento.com/test-ico-crecimiento/">
 <meta property="og:image" content="https://itacacrecimiento.com/assets/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -28,7 +28,7 @@
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Test: ¿puede tu empresa pedir ICO Crecimiento?",
-  "description": "Test gratuito de 7 preguntas para comprobar si una pyme cumple los requisitos de ICO Crecimiento, el préstamo directo del ICO.",
+  "description": "Test gratuito de 6 preguntas para comprobar si una pyme cumple los requisitos de ICO Crecimiento, el préstamo directo del ICO.",
   "url": "https://itacacrecimiento.com/test-ico-crecimiento/",
   "inLanguage": "es-ES",
   "publisher": { "@type": "ProfessionalService", "@id": "https://itacacrecimiento.com/#empresa", "name": "Ítaca Crecimiento", "url": "https://itacacrecimiento.com/" }
@@ -122,7 +122,7 @@
   <article class="legal-body">
     <p class="breadcrumb"><a href="../">Inicio</a><span aria-hidden="true">/</span>Test ICO Crecimiento</p>
     <h1>¿Puede tu empresa pedir ICO Crecimiento?</h1>
-    <p class="lead">Responde 7 preguntas y descubre en un minuto si tu empresa cumple los requisitos del préstamo directo del ICO para pymes. Es gratis y no tienes que registrarte.</p>
+    <p class="lead">Responde 6 preguntas y descubre en un minuto si tu empresa cumple los requisitos del préstamo directo del ICO para pymes. Es gratis y no tienes que registrarte.</p>
 
     <form class="test" id="test" novalidate>
       <fieldset class="q" data-q="pyme">
@@ -173,20 +173,11 @@
 
       <fieldset class="q" data-q="importe">
         <legend><span class="num">6.</span>¿Cuánto necesitarías, aproximadamente?</legend>
+        <p class="hint">El importe mínimo de ICO Crecimiento es de 50.000 €.</p>
         <div class="opts">
-          <label class="opt"><input type="radio" name="importe" value="menos50"><span>Menos de 50.000 €</span></label>
           <label class="opt"><input type="radio" name="importe" value="50-250"><span>50.000 € – 250.000 €</span></label>
           <label class="opt"><input type="radio" name="importe" value="250-1000"><span>250.000 € – 1.000.000 €</span></label>
           <label class="opt"><input type="radio" name="importe" value="mas1000"><span>Más de 1.000.000 €</span></label>
-        </div>
-      </fieldset>
-
-      <fieldset class="q" data-q="plan">
-        <legend><span class="num">7.</span>¿Tienes claro para qué usarás el dinero y cómo lo devolverás?</legend>
-        <div class="opts">
-          <label class="opt"><input type="radio" name="plan" value="si"><span>Sí, lo tengo claro</span></label>
-          <label class="opt"><input type="radio" name="plan" value="masomenos"><span>Más o menos</span></label>
-          <label class="opt"><input type="radio" name="plan" value="no"><span>Todavía no</span></label>
         </div>
       </fieldset>
 
@@ -241,15 +232,14 @@
 
 <script>
 (function () {
-  var Q = ['pyme', 'espana', 'antiguedad', 'auditadas', 'finalidad', 'importe', 'plan'];
+  var Q = ['pyme', 'espana', 'antiguedad', 'auditadas', 'finalidad', 'importe'];
   var TXT = {
     pyme: { si: 'Pyme: sí', no: 'Pyme: no', nose: 'Pyme: no lo sabe' },
     espana: { si: 'Actividad en España: sí', no: 'Actividad en España: no' },
     antiguedad: { '4mas': 'Antigüedad: 4 años o más', menos4: 'Antigüedad: menos de 4 años' },
     auditadas: { si: 'Cuentas auditadas: sí', no: 'Cuentas auditadas: no', nose: 'Cuentas auditadas: no lo sabe' },
     finalidad: { circulante: 'Finalidad: circulante', inversion: 'Finalidad: inversión', ambas: 'Finalidad: circulante e inversión', otra: 'Finalidad: otra' },
-    importe: { menos50: 'Importe: menos de 50.000 €', '50-250': 'Importe: 50.000 – 250.000 €', '250-1000': 'Importe: 250.000 – 1.000.000 €', mas1000: 'Importe: más de 1.000.000 €' },
-    plan: { si: 'Plan de uso y devolución: claro', masomenos: 'Plan de uso y devolución: más o menos', no: 'Plan de uso y devolución: todavía no' }
+    importe: { '50-250': 'Importe: 50.000 – 250.000 €', '250-1000': 'Importe: 250.000 – 1.000.000 €', mas1000: 'Importe: más de 1.000.000 €' }
   };
   var test = document.getElementById('test');
   var err = document.getElementById('test-error');
@@ -286,13 +276,11 @@
     if (a.pyme === 'no') bloqueos.push('ICO Crecimiento es solo para pymes, y tu empresa supera ese tamaño.');
     if (a.espana === 'no') bloqueos.push('La empresa tiene que tener domicilio, establecimiento o sucursal de actividad en España.');
     if (a.antiguedad === 'menos4') bloqueos.push('La empresa necesita al menos 4 años de antigüedad.');
-    if (a.importe === 'menos50') bloqueos.push('El importe mínimo de ICO Crecimiento es de 50.000 €.');
 
     if (a.pyme === 'nose') avisos.push('Comprueba que tu empresa es pyme: menos de 250 empleados y hasta 50 millones de facturación o 43 de balance.');
     if (a.auditadas === 'no') avisos.push('Sin cuentas auditadas, necesitarás un aval público, por ejemplo de una <a href="../guias/aval-sgr/">sociedad de garantía recíproca (SGR)</a>.');
     if (a.auditadas === 'nose') avisos.push('Comprueba si tus cuentas están auditadas. Si no lo están, la alternativa es un <a href="../guias/aval-sgr/">aval de SGR</a>.');
     if (a.finalidad === 'otra') avisos.push('ICO Crecimiento financia circulante e inversión. Si tu necesidad es otra, por ejemplo reorganizar deudas, hay que revisar si encaja.');
-    if (a.plan !== 'si') avisos.push('Tendrás que explicar qué harás con el dinero y cómo lo devolverás. Es justo lo que preparamos contigo en el expediente.');
 
     var box = document.getElementById('veredicto');
     var estado, titulo, detalle, asunto, leadTitle;
