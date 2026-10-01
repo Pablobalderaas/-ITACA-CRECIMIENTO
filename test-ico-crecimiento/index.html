@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Test: ¿puede tu empresa pedir ICO Crecimiento? | Ítaca Crecimiento</title>
+<meta name="description" content="Responde 7 preguntas y descubre en un minuto si tu empresa cumple los requisitos de ICO Crecimiento, el préstamo directo del ICO para pymes. Gratis y sin registro.">
+<link rel="canonical" href="https://itacacrecimiento.com/test-ico-crecimiento/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ítaca Crecimiento">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Test: ¿puede tu empresa pedir ICO Crecimiento?">
+<meta property="og:description" content="Responde 7 preguntas y descubre en un minuto si tu empresa cumple los requisitos de ICO Crecimiento.">
+<meta property="og:url" content="https://itacacrecimiento.com/test-ico-crecimiento/">
+<meta property="og:image" content="https://itacacrecimiento.com/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0E2A47">
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../assets/legal.css">
+<link rel="stylesheet" href="../assets/guias.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Test: ¿puede tu empresa pedir ICO Crecimiento?",
+  "description": "Test gratuito de 7 preguntas para comprobar si una pyme cumple los requisitos de ICO Crecimiento, el préstamo directo del ICO.",
+  "url": "https://itacacrecimiento.com/test-ico-crecimiento/",
+  "inLanguage": "es-ES",
+  "publisher": { "@type": "ProfessionalService", "@id": "https://itacacrecimiento.com/#empresa", "name": "Ítaca Crecimiento", "url": "https://itacacrecimiento.com/" }
+}
+</script>
+<style>
+  .test { display: grid; gap: 28px; max-width: 68ch; margin-top: 8px; }
+  .q { border: 0; margin: 0; padding: 0 0 26px; border-bottom: 1px solid var(--line); min-width: 0; }
+  .q legend { padding: 0; font-size: 18px; font-weight: 600; color: var(--navy); line-height: 1.4; }
+  .q legend .num { color: var(--terra); margin-right: 8px; font-variant-numeric: tabular-nums; }
+  .q .hint { margin: 6px 0 0; font-size: 14px; line-height: 1.6; color: var(--text-2); }
+  .opts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+  .opt { position: relative; }
+  .opt input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+  .opt span {
+    display: inline-block; padding: 11px 18px; border: 1px solid var(--line); border-radius: 2px;
+    background: var(--paper); font-size: 15px; color: var(--navy); cursor: pointer;
+  }
+  .opt input:hover + span { border-color: var(--navy); }
+  .opt input:checked + span { background: var(--navy); border-color: var(--navy); color: var(--paper); }
+  .opt input:focus-visible + span { outline: 2px solid var(--terra); outline-offset: 2px; }
+  .q.missing legend { color: var(--terra); }
+  .test-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+  .btn-test {
+    border: 0; cursor: pointer; background: var(--terra); color: var(--paper);
+    padding: 16px 28px; font-size: 16px; font-weight: 600; border-radius: 2px; font-family: inherit;
+  }
+  .btn-test:hover { background: #9C4624; }
+  .test-error { margin: 0; font-size: 14px; color: #9C4624; }
+  .btn-link { border: 0; background: none; padding: 0; font: inherit; font-size: 14px; color: var(--text-2); text-decoration: underline; cursor: pointer; }
+
+  .resultado { margin-top: 40px; max-width: 68ch; scroll-margin-top: 24px; }
+  .veredicto { padding: 26px 26px 22px; border-top: 4px solid var(--navy); background: var(--cream); border-radius: 2px; }
+  .veredicto.ok { border-top-color: #2F7A55; }
+  .veredicto.cond { border-top-color: #C08A2B; }
+  .veredicto.no { border-top-color: var(--terra); }
+  .veredicto .estado { margin: 0 0 6px; font-size: 12px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; }
+  .veredicto.ok .estado { color: #2F7A55; }
+  .veredicto.cond .estado { color: #8A6418; }
+  .veredicto.no .estado { color: var(--terra); }
+  .legal-body .veredicto h2 { margin: 0 0 12px; padding: 0; border: 0; font-size: 26px; line-height: 1.2; }
+  .legal-body .veredicto p, .legal-body .veredicto li { color: var(--navy); }
+  .legal-body .veredicto ul { margin: 12px 0 0; }
+
+  .lead-form { margin-top: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 22px 20px; }
+  .lead-form h3 { grid-column: 1 / -1; margin: 0; font-size: 20px; }
+  .lead-form .intro { grid-column: 1 / -1; margin: -10px 0 0; }
+  .lead-form label { display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--text-2); }
+  .lead-form label.full { grid-column: 1 / -1; }
+  .lead-form input, .lead-form textarea {
+    border: 0; border-bottom: 1px solid var(--navy); border-radius: 0; background: transparent;
+    padding: 9px 0; font: inherit; font-size: 16px; letter-spacing: 0; text-transform: none; color: var(--navy); outline: none; width: 100%;
+  }
+  .lead-form input:focus, .lead-form textarea:focus { border-bottom: 2px solid var(--terra); padding-bottom: 8px; }
+  .lead-foot { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+  .lead-foot span { font-size: 13px; line-height: 1.6; color: var(--text-2); max-width: 340px; }
+  .lead-error { grid-column: 1 / -1; margin: 0; font-size: 14px; color: #9C4624; }
+  .lead-ok { margin-top: 28px; border-top: 2px solid var(--navy); padding-top: 22px; }
+</style>
+</head>
+<body>
+
+<header class="legal-header">
+  <div class="inner">
+    <a href="../" aria-label="Ítaca Crecimiento, volver al inicio">
+      <svg class="logo" viewBox="0 0 560 160" aria-hidden="true">
+        <g transform="translate(24 38) scale(1.3)">
+          <path d="M30 4 L30 46 L6 46 Q14 22 30 4 Z" fill="#F3EEE4"/>
+          <path d="M35 13 L35 46 L57 46 Q52 26 35 13 Z" fill="#D9774C"/>
+          <path d="M4 54 Q18 48 32 54 T60 54" fill="none" stroke="#F3EEE4" stroke-width="3" stroke-linecap="round"/>
+        </g>
+        <text class="name" x="122" y="98" fill="#F3EEE4">Ítaca</text>
+        <text class="tag" x="124" y="124" fill="#F3EEE4">CRECIMIENTO</text>
+      </svg>
+    </a>
+    <a class="back" href="../#contacto">Contactar →</a>
+  </div>
+</header>
+
+<main class="legal">
+  <aside class="legal-side">
+    <p class="eyebrow">Test gratuito</p>
+    <nav class="legal-nav" aria-label="Más información">
+      <a href="../guias/ico-crecimiento/">Requisitos de ICO Crecimiento</a>
+      <a href="../guias/ico-crecimiento-circulante/">ICO Crecimiento para circulante</a>
+      <a href="../guias/aval-sgr/">Aval de SGR</a>
+      <a href="../blog/">Blog</a>
+    </nav>
+  </aside>
+
+  <article class="legal-body">
+    <p class="breadcrumb"><a href="../">Inicio</a><span aria-hidden="true">/</span>Test ICO Crecimiento</p>
+    <h1>¿Puede tu empresa pedir ICO Crecimiento?</h1>
+    <p class="lead">Responde 7 preguntas y descubre en un minuto si tu empresa cumple los requisitos del préstamo directo del ICO para pymes. Es gratis y no tienes que registrarte.</p>
+
+    <form class="test" id="test" novalidate>
+      <fieldset class="q" data-q="pyme">
+        <legend><span class="num">1.</span>¿Tu empresa es una pyme?</legend>
+        <p class="hint">Menos de 250 empleados y una facturación de hasta 50 millones de euros (o un balance de hasta 43 millones).</p>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="pyme" value="si"><span>Sí</span></label>
+          <label class="opt"><input type="radio" name="pyme" value="no"><span>No, es más grande</span></label>
+          <label class="opt"><input type="radio" name="pyme" value="nose"><span>No lo sé</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="q" data-q="espana">
+        <legend><span class="num">2.</span>¿Tiene su domicilio, un establecimiento o una sucursal de actividad en España?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="espana" value="si"><span>Sí</span></label>
+          <label class="opt"><input type="radio" name="espana" value="no"><span>No</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="q" data-q="antiguedad">
+        <legend><span class="num">3.</span>¿Cuántos años tiene la empresa?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="antiguedad" value="4mas"><span>4 años o más</span></label>
+          <label class="opt"><input type="radio" name="antiguedad" value="menos4"><span>Menos de 4 años</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="q" data-q="auditadas">
+        <legend><span class="num">4.</span>¿Tiene auditadas las cuentas de los dos últimos ejercicios?</legend>
+        <p class="hint">Están obligadas a auditarse las sociedades que, dos años seguidos, superan dos de estos tres límites: 2,85 millones de activo, 5,7 millones de facturación o 50 empleados.</p>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="auditadas" value="si"><span>Sí</span></label>
+          <label class="opt"><input type="radio" name="auditadas" value="no"><span>No</span></label>
+          <label class="opt"><input type="radio" name="auditadas" value="nose"><span>No lo sé</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="q" data-q="finalidad">
+        <legend><span class="num">5.</span>¿Para qué necesitas la financiación?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="finalidad" value="circulante"><span>Circulante: proveedores, nóminas, stock</span></label>
+          <label class="opt"><input type="radio" name="finalidad" value="inversion"><span>Inversión: maquinaria, vehículos, software…</span></label>
+          <label class="opt"><input type="radio" name="finalidad" value="ambas"><span>Las dos cosas</span></label>
+          <label class="opt"><input type="radio" name="finalidad" value="otra"><span>Otra cosa</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="q" data-q="importe">
+        <legend><span class="num">6.</span>¿Cuánto necesitarías, aproximadamente?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="importe" value="menos50"><span>Menos de 50.000 €</span></label>
+          <label class="opt"><input type="radio" name="importe" value="50-250"><span>50.000 € – 250.000 €</span></label>
+          <label class="opt"><input type="radio" name="importe" value="250-1000"><span>250.000 € – 1.000.000 €</span></label>
+          <label class="opt"><input type="radio" name="importe" value="mas1000"><span>Más de 1.000.000 €</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="q" data-q="plan">
+        <legend><span class="num">7.</span>¿Tienes claro para qué usarás el dinero y cómo lo devolverás?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="plan" value="si"><span>Sí, lo tengo claro</span></label>
+          <label class="opt"><input type="radio" name="plan" value="masomenos"><span>Más o menos</span></label>
+          <label class="opt"><input type="radio" name="plan" value="no"><span>Todavía no</span></label>
+        </div>
+      </fieldset>
+
+      <div class="test-actions">
+        <button class="btn-test" type="submit">Ver mi resultado</button>
+        <p class="test-error" id="test-error" role="alert" hidden></p>
+      </div>
+    </form>
+
+    <section class="resultado" id="resultado" hidden aria-live="polite">
+      <div class="veredicto" id="veredicto">
+        <p class="estado" id="estado"></p>
+        <h2 id="titulo-res"></h2>
+        <div id="detalle"></div>
+      </div>
+
+      <form class="lead-form" id="lead-form" data-endpoint="https://formspree.io/f/myezlpqe" novalidate>
+        <h3 id="lead-title">¿Quieres que revisemos tu caso?</h3>
+        <p class="intro">Déjanos tus datos y te enviamos una primera valoración gratuita en 48 horas laborables. Recibiremos también tus respuestas del test, así no tendrás que repetirlas.</p>
+        <input type="hidden" name="_subject" id="lead-subject" value="Test ICO Crecimiento">
+        <input type="hidden" name="resultado_test" id="lead-resultado">
+        <input type="hidden" name="respuestas_test" id="lead-respuestas">
+        <label>Nombre<input id="l-nombre" name="nombre" autocomplete="name" required></label>
+        <label>Empresa<input id="l-empresa" name="empresa" autocomplete="organization"></label>
+        <label>Correo<input id="l-correo" name="email" type="email" autocomplete="email" required></label>
+        <label>Teléfono<input id="l-telefono" name="telefono" type="tel" autocomplete="tel"></label>
+        <label class="full">Algo más que quieras contarnos<textarea id="l-mensaje" name="mensaje" rows="2"></textarea></label>
+        <p class="lead-error" id="lead-error" role="alert" hidden></p>
+        <div class="lead-foot">
+          <span>Tus datos se usan solo para responder a esta consulta. Más información en la <a href="../privacidad.html">política de privacidad</a>.</span>
+          <button class="btn-test" type="submit">Quiero una valoración</button>
+        </div>
+      </form>
+      <div class="lead-ok" id="lead-ok" hidden>
+        <p class="lead" style="margin:0 0 8px">Gracias.</p>
+        <p>Hemos recibido tus datos y tus respuestas. Te escribiremos en un plazo de 48 horas laborables.</p>
+      </div>
+
+      <p style="margin-top:28px"><button class="btn-link" type="button" id="repetir">Repetir el test</button></p>
+    </section>
+
+    <p class="note" style="margin-top:40px">Este test es orientativo y se basa en la información pública de ICO Crecimiento a septiembre de 2026. La decisión sobre cada solicitud corresponde siempre al ICO. Ítaca Crecimiento es una consultoría independiente: no somos el ICO ni una entidad financiera.</p>
+  </article>
+</main>
+
+<footer class="legal-footer">
+  <div class="inner">
+    <span>© 2026 Ítaca Crecimiento · Consultoría independiente. No somos una entidad financiera ni formamos parte del ICO.</span>
+    <nav aria-label="Legal"><a href="../">Inicio</a><a href="../guias/">Guías</a><a href="../blog/">Blog</a><a href="../aviso-legal.html">Aviso legal</a><a href="../privacidad.html">Privacidad</a><a href="../cookies.html">Cookies</a></nav>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var Q = ['pyme', 'espana', 'antiguedad', 'auditadas', 'finalidad', 'importe', 'plan'];
+  var TXT = {
+    pyme: { si: 'Pyme: sí', no: 'Pyme: no', nose: 'Pyme: no lo sabe' },
+    espana: { si: 'Actividad en España: sí', no: 'Actividad en España: no' },
+    antiguedad: { '4mas': 'Antigüedad: 4 años o más', menos4: 'Antigüedad: menos de 4 años' },
+    auditadas: { si: 'Cuentas auditadas: sí', no: 'Cuentas auditadas: no', nose: 'Cuentas auditadas: no lo sabe' },
+    finalidad: { circulante: 'Finalidad: circulante', inversion: 'Finalidad: inversión', ambas: 'Finalidad: circulante e inversión', otra: 'Finalidad: otra' },
+    importe: { menos50: 'Importe: menos de 50.000 €', '50-250': 'Importe: 50.000 – 250.000 €', '250-1000': 'Importe: 250.000 – 1.000.000 €', mas1000: 'Importe: más de 1.000.000 €' },
+    plan: { si: 'Plan de uso y devolución: claro', masomenos: 'Plan de uso y devolución: más o menos', no: 'Plan de uso y devolución: todavía no' }
+  };
+  var test = document.getElementById('test');
+  var err = document.getElementById('test-error');
+  var res = document.getElementById('resultado');
+
+  function val(n) { var el = test.querySelector('input[name="' + n + '"]:checked'); return el ? el.value : null; }
+  function li(items) { return items.length ? '<ul>' + items.map(function (t) { return '<li>' + t + '</li>'; }).join('') + '</ul>' : ''; }
+
+  function condiciones(f) {
+    var c = '<strong>Circulante:</strong> hasta el 100 % de la necesidad, a 5 años con 1 de carencia.';
+    var i = '<strong>Inversión:</strong> hasta el 80 % de la inversión, a 10 años con 2 de carencia.';
+    if (f === 'circulante') return [c];
+    if (f === 'inversion') return [i];
+    return [c, i];
+  }
+
+  test.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var a = {}, faltan = [];
+    Q.forEach(function (n) {
+      a[n] = val(n);
+      test.querySelector('[data-q="' + n + '"]').classList.toggle('missing', !a[n]);
+      if (!a[n]) faltan.push(n);
+    });
+    if (faltan.length) {
+      err.textContent = 'Te falta responder ' + (faltan.length === 1 ? '1 pregunta' : faltan.length + ' preguntas') + ', marcada' + (faltan.length === 1 ? '' : 's') + ' en naranja.';
+      err.hidden = false;
+      test.querySelector('[data-q="' + faltan[0] + '"]').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+    err.hidden = true;
+
+    var bloqueos = [], avisos = [];
+    if (a.pyme === 'no') bloqueos.push('ICO Crecimiento es solo para pymes, y tu empresa supera ese tamaño.');
+    if (a.espana === 'no') bloqueos.push('La empresa tiene que tener domicilio, establecimiento o sucursal de actividad en España.');
+    if (a.antiguedad === 'menos4') bloqueos.push('La empresa necesita al menos 4 años de antigüedad.');
+    if (a.importe === 'menos50') bloqueos.push('El importe mínimo de ICO Crecimiento es de 50.000 €.');
+
+    if (a.pyme === 'nose') avisos.push('Comprueba que tu empresa es pyme: menos de 250 empleados y hasta 50 millones de facturación o 43 de balance.');
+    if (a.auditadas === 'no') avisos.push('Sin cuentas auditadas, necesitarás un aval público, por ejemplo de una <a href="../guias/aval-sgr/">sociedad de garantía recíproca (SGR)</a>.');
+    if (a.auditadas === 'nose') avisos.push('Comprueba si tus cuentas están auditadas. Si no lo están, la alternativa es un <a href="../guias/aval-sgr/">aval de SGR</a>.');
+    if (a.finalidad === 'otra') avisos.push('ICO Crecimiento financia circulante e inversión. Si tu necesidad es otra, por ejemplo reorganizar deudas, hay que revisar si encaja.');
+    if (a.plan !== 'si') avisos.push('Tendrás que explicar qué harás con el dinero y cómo lo devolverás. Es justo lo que preparamos contigo en el expediente.');
+
+    var box = document.getElementById('veredicto');
+    var estado, titulo, detalle, asunto, leadTitle;
+    if (bloqueos.length) {
+      box.className = 'veredicto no';
+      estado = 'Ahora mismo no encajas';
+      titulo = 'Tu empresa no cumple algún requisito de ICO Crecimiento';
+      detalle = '<p>Según tus respuestas:</p>' + li(bloqueos) +
+        '<p>Aun así, hay otras vías: líneas del ICO que se piden a través del banco, avales o financiación bancaria. Cuéntanos tu caso y te orientamos.</p>';
+      asunto = 'Test ICO Crecimiento: no encaja';
+      leadTitle = '¿Quieres que te orientemos hacia otra vía?';
+    } else if (avisos.length) {
+      box.className = 'veredicto cond';
+      estado = 'Encajas, con algún punto por resolver';
+      titulo = 'Tu empresa puede encajar en ICO Crecimiento';
+      detalle = '<p>Cumples los requisitos básicos. Antes de solicitarlo conviene resolver esto:</p>' + li(avisos) +
+        '<p>Las condiciones que te aplicarían:</p>' + li(condiciones(a.finalidad));
+      asunto = 'Test ICO Crecimiento: encaja con condiciones';
+      leadTitle = '¿Quieres que revisemos tu caso?';
+    } else {
+      box.className = 'veredicto ok';
+      estado = 'Buenas noticias';
+      titulo = 'Tu empresa encaja en ICO Crecimiento';
+      detalle = '<p>Según tus respuestas, cumples los requisitos principales. Las condiciones que te aplicarían:</p>' + li(condiciones(a.finalidad)) +
+        '<p>Desde 50.000 €, a Euríbor más un diferencial de entre el 0,75 % y el 1,75 %, y sin pasar por el banco.</p>';
+      asunto = 'Test ICO Crecimiento: encaja';
+      leadTitle = 'Siguiente paso: preparar tu solicitud';
+    }
+    document.getElementById('estado').textContent = estado;
+    document.getElementById('titulo-res').textContent = titulo;
+    document.getElementById('detalle').innerHTML = detalle;
+    document.getElementById('lead-title').textContent = leadTitle;
+    document.getElementById('lead-subject').value = asunto;
+    document.getElementById('lead-resultado').value = estado;
+    document.getElementById('lead-respuestas').value = Q.map(function (n) { return TXT[n][a[n]]; }).join(' · ');
+
+    res.hidden = false;
+    res.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  document.getElementById('repetir').addEventListener('click', function () {
+    test.reset();
+    test.querySelectorAll('.q').forEach(function (q) { q.classList.remove('missing'); });
+    res.hidden = true;
+    test.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  var lead = document.getElementById('lead-form');
+  var lerr = document.getElementById('lead-error');
+  lead.addEventListener('submit', function (e) {
+    e.preventDefault();
+    lerr.hidden = true;
+    if (!lead.checkValidity()) {
+      var bad = lead.querySelector(':invalid');
+      lerr.textContent = bad && bad.type === 'email' && bad.value
+        ? 'Revisa el correo: parece que falta algo (por ejemplo, la @).'
+        : 'Escribe tu nombre y tu correo para que podamos responderte.';
+      lerr.hidden = false;
+      if (bad) bad.focus();
+      return;
+    }
+    var btn = lead.querySelector('button[type="submit"]');
+    btn.disabled = true; btn.textContent = 'Enviando…';
+    fetch(lead.getAttribute('data-endpoint'), { method: 'POST', body: new FormData(lead), headers: { 'Accept': 'application/json' } })
+      .then(function (r) {
+        if (!r.ok) throw new Error();
+        lead.hidden = true;
+        document.getElementById('lead-ok').hidden = false;
+      })
+      .catch(function () {
+        lerr.textContent = 'No se ha podido enviar. Inténtalo de nuevo o escríbenos a general@itacacrecimiento.com.';
+        lerr.hidden = false;
+      })
+      .finally(function () { btn.disabled = false; btn.textContent = 'Quiero una valoración'; });
+  });
+})();
+</script>
+</body>
+</html>

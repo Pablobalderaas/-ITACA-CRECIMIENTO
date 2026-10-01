@@ -466,7 +466,8 @@ CTA = '''
     <aside class="cta">
       <h2>¿Quieres solicitar ICO Crecimiento?</h2>
       <p>Comprobamos si tu empresa cumple los requisitos de ICO Crecimiento, preparamos el expediente completo y te acompañamos en la solicitud en ICO Online hasta la firma.</p>
-      <a class="btn" href="{up}#contacto">Comprobar si mi empresa puede pedirlo</a>
+      <a class="btn" href="{up}test-ico-crecimiento/">Haz el test de requisitos (1 minuto)</a>
+      <p style="font-size:14px">O <a href="{up}#contacto" style="color:var(--cream);text-decoration:underline">escríbenos directamente</a>.</p>
     </aside>'''
 
 def relacionados(slug):
