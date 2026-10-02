@@ -76,7 +76,7 @@ faqs=[
 # ------------------------------------------------------------------ minimis
 NUEVOS.append(dict(
 slug="ayudas-de-minimis-ico-crecimiento",
-fecha="2026-10-02",
+fecha="2026-10-23",
 titulo="Ayudas de minimis e ICO Crecimiento: por qué te preguntan por tus subvenciones",
 seo="Ayudas de minimis en ICO Crecimiento: qué son, límites y declaración",
 desc="Al pedir ICO Crecimiento hay que declarar las ayudas públicas recibidas. Qué son las ayudas de minimis, el límite de 300.000 € en tres años y cómo afecta a tu préstamo.",
@@ -136,7 +136,7 @@ faqs=[
 # ------------------------------------------------------------------ deuda corto plazo
 NUEVOS.append(dict(
 slug="cancelar-deuda-corto-plazo-ico-crecimiento",
-fecha="2026-10-02",
+fecha="2026-10-09",
 titulo="Cancelar deuda a corto plazo con ICO Crecimiento: cuándo tiene sentido",
 seo="Cancelar deuda a corto plazo con ICO Crecimiento: cuándo conviene",
 desc="ICO Crecimiento permite destinar el circulante a cancelar deuda a corto plazo con proveedores o bancos. Cuándo tiene sentido, cuándo no y qué hay que tener en cuenta.",
@@ -196,7 +196,7 @@ faqs=[
 # ------------------------------------------------------------------ relevo generacional
 NUEVOS.append(dict(
 slug="relevo-generacional-ico-crecimiento",
-fecha="2026-10-02",
+fecha="2026-10-30",
 titulo="Relevo generacional en la empresa familiar: cómo puede ayudar ICO Crecimiento",
 seo="Relevo generacional en la empresa familiar con ICO Crecimiento",
 desc="ICO Crecimiento puede financiar la compra de participaciones o de acciones propias para facilitar el relevo generacional en la empresa familiar. Qué permite y qué hay que estudiar.",
@@ -248,7 +248,7 @@ faqs=[
 # ------------------------------------------------------------------ después de la aprobación
 NUEVOS.append(dict(
 slug="despues-de-la-aprobacion-ico-crecimiento",
-fecha="2026-10-02",
+fecha="2026-10-16",
 titulo="Me han aprobado ICO Crecimiento: firma, desembolso y justificación",
 seo="ICO Crecimiento aprobado: firma ante notario, desembolso y justificación",
 desc="Qué pasa después de que el ICO apruebe tu préstamo: plazo para firmar, cuándo llega el dinero, cómo se justifica el gasto y qué obligaciones tienes durante el préstamo.",

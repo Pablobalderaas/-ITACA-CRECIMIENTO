@@ -73,3 +73,7 @@ El archivo `CNAME` indica a GitHub Pages que la web se sirve en `itacacrecimient
 - **No toques los registros MX ni TXT del correo**, o dejará de funcionar `general@itacacrecimiento.com`.
 - Cuando los DNS se hayan propagado (de minutos a 24 horas), marca **Enforce HTTPS** en Settings → Pages.
 - Recomendado: verifica el dominio en la configuración de tu cuenta de GitHub (Settings → Pages → Add a domain) para que nadie más pueda usarlo en GitHub Pages.
+
+## Artículos programados
+
+`gen_blog.py` solo publica los artículos cuya `fecha` ya ha llegado; los de fecha futura quedan programados (se listan al ejecutarlo). Para publicar el que toca, ejecuta `python3 herramientas/gen_blog.py .` ese día, que también actualiza `sitemap.xml` y `llms.txt`, y haz commit y push.

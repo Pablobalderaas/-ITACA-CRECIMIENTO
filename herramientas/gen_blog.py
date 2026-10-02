@@ -268,6 +268,11 @@ IMAGENES["cancelar-deuda-corto-plazo-ico-crecimiento"] = ("Portada: de deuda a c
 IMAGENES["relevo-generacional-ico-crecimiento"] = ("Portada: relevo generacional en la empresa familiar", "1200", "630")
 IMAGENES["despues-de-la-aprobacion-ico-crecimiento"] = ("Portada: firma, desembolso y justificación de ICO Crecimiento", "1200", "630")
 IMAGENES["por-que-deniegan-ico-crecimiento"] = ("Portada: los filtros de solvencia del ICO", "1200", "630")
+# Solo se publican los artículos cuya fecha ya ha llegado (los demás quedan programados).
+import datetime
+HOY = os.environ.get("HOY", datetime.date.today().isoformat())
+PROGRAMADOS = [p for p in POSTS if p["fecha"] > HOY]
+POSTS = [p for p in POSTS if p["fecha"] <= HOY]
 POSTS.sort(key=lambda p: p["fecha"], reverse=True)
 ORG = {"@type": "ProfessionalService", "@id": f"{SITE}/#empresa", "name": "Ítaca Crecimiento", "url": f"{SITE}/"}
 PERSON = {"@type": "Person", "name": AUTOR, "worksFor": {"@id": f"{SITE}/#empresa"}}
@@ -417,4 +422,22 @@ with open(f"{ROOT}/blog/index.html", "w") as fh:
                   "Artículos prácticos sobre ICO Crecimiento y financiación de pymes: casos por sector, comparativas y consejos para preparar la solicitud.",
                   "hub", hub_body, hub_ld, og_type="website"))
 
+print("Programados:", ", ".join(f'{p["slug"]} ({p["fecha"]})' for p in PROGRAMADOS) or "ninguno")
 print("\n".join(f"blog/{p['slug']}/" for p in POSTS))
+
+# ------------------------------------------------------------------ sitemap.xml y llms.txt
+import re
+sm_path = f"{ROOT}/sitemap.xml"
+sm = open(sm_path).read()
+sm = re.sub(r"  <url>\n    <loc>https://itacacrecimiento\.com/blog/[^<]+/</loc>\n    <lastmod>[^<]*</lastmod>\n  </url>\n", "", sm)
+sm = re.sub(r"(<loc>https://itacacrecimiento\.com/blog/</loc>\s*<lastmod>)[^<]*", rf"\g<1>{POSTS[0]['fecha']}", sm)
+sm = sm.replace("</urlset>", "".join(
+    f"  <url>\n    <loc>{SITE}/blog/{p['slug']}/</loc>\n    <lastmod>{p['fecha']}</lastmod>\n  </url>\n" for p in POSTS) + "</urlset>")
+open(sm_path, "w").write(sm)
+
+ll_path = f"{ROOT}/llms.txt"
+ll = open(ll_path).read()
+lineas = [l for l in ll.split("\n") if not re.match(r"- \[.*\]\(https://itacacrecimiento\.com/blog/[^)]+/\)", l)]
+i = next(n for n, l in enumerate(ll.split("\n")) if re.match(r"- \[.*\]\(https://itacacrecimiento\.com/blog/[^)]+/\)", l))
+lineas[i:i] = [f"- [{p['titulo']}]({SITE}/blog/{p['slug']}/)" for p in POSTS]
+open(ll_path, "w").write("\n".join(lineas))
