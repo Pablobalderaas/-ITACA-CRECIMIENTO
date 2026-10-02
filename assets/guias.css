@@ -49,3 +49,11 @@
 .legal-body .relacionados li { margin: 0; padding: 10px 0; border-bottom: 1px solid var(--line); }
 .relacionados a { font-weight: 600; text-decoration: none; }
 .relacionados a::after { content: " →"; color: var(--terra); }
+
+.legal-body .portada { display: block; width: 100%; max-width: 68ch; height: auto; aspect-ratio: auto; margin: 0 0 32px; border-radius: 2px; object-fit: cover; max-height: 440px; }
+.legal-body .guia-list li.con-imagen { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 20px; align-items: start; }
+.legal-body .miniatura { display: block; width: 100%; height: 120px; object-fit: cover; border-radius: 2px; }
+@media (max-width: 560px) {
+  .legal-body .guia-list li.con-imagen { grid-template-columns: minmax(0, 1fr); }
+  .legal-body .miniatura { height: 160px; }
+}

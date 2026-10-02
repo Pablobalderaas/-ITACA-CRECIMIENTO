@@ -257,11 +257,13 @@ LOGO = '''<svg class="logo" viewBox="0 0 560 160" aria-hidden="true">
         <text class="tag" x="124" y="124" fill="#F3EEE4">CRECIMIENTO</text>
       </svg>'''
 
+IMAGENES = {'ico-crecimiento-o-prestamo-bancario': ('Mesa de trabajo con informes financieros, portátil y tableta', '628', '430'), 'que-se-puede-financiar-con-ico-crecimiento': ('Dos personas revisando un plan de trabajo junto a varios portátiles', '1200', '801'), 'ico-crecimiento-empresas-de-transporte': ('Fila de camiones aparcados en una base logística', '960', '600'), 'errores-al-solicitar-ico-crecimiento': ('Equipo revisando un informe de sostenibilidad ASG sobre una mesa', '1200', '630')}
+
 POSTS.sort(key=lambda p: p["fecha"], reverse=True)
 ORG = {"@type": "ProfessionalService", "@id": f"{SITE}/#empresa", "name": "Ítaca Crecimiento", "url": f"{SITE}/"}
 PERSON = {"@type": "Person", "name": AUTOR, "worksFor": {"@id": f"{SITE}/#empresa"}}
 
-def page(depth, url, title, desc, current, body, jsonld, og_type="article"):
+def page(depth, url, title, desc, current, body, jsonld, og_type="article", og_image=None):
     up = "../" * depth
     CUR = ' aria-current="page"'
     nav = "".join(f'<a href="{up}blog/{p["slug"]}/"{CUR if current == p["slug"] else ""}>{p["titulo"]}</a>' for p in POSTS)
@@ -280,7 +282,7 @@ def page(depth, url, title, desc, current, body, jsonld, og_type="article"):
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{SITE}/assets/og-image.jpg">
+<meta property="og:image" content="{og_image or SITE + '/assets/og-image.jpg'}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -335,6 +337,13 @@ CTA = '''
       <p style="font-size:14px">O <a href="{up}#contacto" style="color:var(--cream);text-decoration:underline">escríbenos directamente</a>.</p>
     </aside>'''
 
+def portada(slug, up, cls="portada"):
+    if slug not in IMAGENES:
+        return ""
+    alt, w, h = IMAGENES[slug]
+    load = ' fetchpriority="high"' if cls == "portada" else ' loading="lazy"'
+    return f'    <img class="{cls}" src="{up}assets/blog/{slug}.webp" alt="{alt}" width="{w}" height="{h}"{load}>'
+
 GUIAS_CLAVE = [("ico-crecimiento", "ICO Crecimiento: qué es, requisitos y cómo solicitarlo"),
                ("ico-crecimiento-circulante", "ICO Crecimiento para circulante")]
 
@@ -355,6 +364,7 @@ for p in POSTS:
     body = f'''    <p class="breadcrumb"><a href="../../">Inicio</a><span aria-hidden="true">/</span><a href="../">Blog</a><span aria-hidden="true">/</span>{p["titulo"]}</p>
     <h1>{p["titulo"]}</h1>
     <p class="byline">Por <strong>{AUTOR}</strong>, Ítaca Crecimiento · <time datetime="{p["fecha"]}">{fecha_larga(p["fecha"])}</time></p>
+{portada(p["slug"], "../../")}
     <div class="resumen">
       <p class="eyebrow">En resumen</p>
       {p["resumen"]}
@@ -368,7 +378,7 @@ for p in POSTS:
     jsonld = [
         {"@context": "https://schema.org", "@type": "BlogPosting", "headline": p["titulo"], "description": p["desc"],
          "datePublished": p["fecha"], "dateModified": p["fecha"], "inLanguage": "es-ES",
-         "author": PERSON, "publisher": ORG, "mainEntityOfPage": url, "image": f"{SITE}/assets/og-image.jpg"},
+         "author": PERSON, "publisher": ORG, "mainEntityOfPage": url, "image": (f"{SITE}/assets/blog/{p['slug']}-og.jpg" if p["slug"] in IMAGENES else f"{SITE}/assets/og-image.jpg")},
         {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in p["faqs"]]},
         {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
@@ -378,10 +388,10 @@ for p in POSTS:
     ]
     os.makedirs(f"{ROOT}/blog/{p['slug']}", exist_ok=True)
     with open(f"{ROOT}/blog/{p['slug']}/index.html", "w") as fh:
-        fh.write(page(2, url, f"{p['seo']} | Ítaca Crecimiento", p["desc"], p["slug"], body, jsonld))
+        fh.write(page(2, url, f"{p['seo']} | Ítaca Crecimiento", p["desc"], p["slug"], body, jsonld, og_image=(f"{SITE}/assets/blog/{p['slug']}-og.jpg" if p["slug"] in IMAGENES else None)))
 
 items = "".join(
-    f'\n      <li><p class="byline" style="margin:0 0 6px"><time datetime="{p["fecha"]}">{fecha_larga(p["fecha"])}</time></p><h2><a href="{p["slug"]}/">{p["titulo"]}</a></h2><p>{p["desc"]}</p></li>'
+    f'\n      <li class="con-imagen">{portada(p["slug"], "../", "miniatura")}<div><p class="byline" style="margin:0 0 6px"><time datetime="{p["fecha"]}">{fecha_larga(p["fecha"])}</time></p><h2><a href="{p["slug"]}/">{p["titulo"]}</a></h2><p>{p["desc"]}</p></div></li>'
     for p in POSTS)
 hub_body = f'''    <p class="breadcrumb"><a href="../">Inicio</a><span aria-hidden="true">/</span>Blog</p>
     <h1>Blog de ICO Crecimiento</h1>
