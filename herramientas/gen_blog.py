@@ -259,6 +259,15 @@ LOGO = '''<svg class="logo" viewBox="0 0 560 160" aria-hidden="true">
 
 IMAGENES = {'ico-crecimiento-o-prestamo-bancario': ('Mesa de trabajo con informes financieros, portátil y tableta', '628', '430'), 'que-se-puede-financiar-con-ico-crecimiento': ('Dos personas revisando un plan de trabajo junto a varios portátiles', '1200', '801'), 'ico-crecimiento-empresas-de-transporte': ('Fila de camiones aparcados en una base logística', '960', '600'), 'errores-al-solicitar-ico-crecimiento': ('Equipo revisando un informe de sostenibilidad ASG sobre una mesa', '1200', '630')}
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from blog_nuevos import NUEVOS
+POSTS.extend(NUEVOS)
+IMAGENES["cuanto-cuesta-ico-crecimiento"] = ("Portada: cuánto cuesta ICO Crecimiento", "1200", "630")
+IMAGENES["ayudas-de-minimis-ico-crecimiento"] = ("Portada: ayudas de minimis e ICO Crecimiento", "1200", "630")
+IMAGENES["cancelar-deuda-corto-plazo-ico-crecimiento"] = ("Portada: de deuda a corto plazo a un préstamo a 5 años", "1200", "630")
+IMAGENES["relevo-generacional-ico-crecimiento"] = ("Portada: relevo generacional en la empresa familiar", "1200", "630")
+IMAGENES["despues-de-la-aprobacion-ico-crecimiento"] = ("Portada: firma, desembolso y justificación de ICO Crecimiento", "1200", "630")
+IMAGENES["por-que-deniegan-ico-crecimiento"] = ("Portada: los filtros de solvencia del ICO", "1200", "630")
 POSTS.sort(key=lambda p: p["fecha"], reverse=True)
 ORG = {"@type": "ProfessionalService", "@id": f"{SITE}/#empresa", "name": "Ítaca Crecimiento", "url": f"{SITE}/"}
 PERSON = {"@type": "Person", "name": AUTOR, "worksFor": {"@id": f"{SITE}/#empresa"}}
