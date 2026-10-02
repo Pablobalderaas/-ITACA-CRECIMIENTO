@@ -376,7 +376,7 @@ NUEVAS.append(dict(
 slug="novedades-ico-crecimiento",
 titulo="Novedades de ICO Crecimiento",
 seo="Novedades de ICO Crecimiento 2026: últimos cambios de la línea",
-desc="Los cambios y noticias de la línea ICO Crecimiento ordenados por fecha: lanzamiento, ICO Crecimiento Exportadores, modalidad DANA, cuestionario de sostenibilidad y estado actual de la línea.",
+desc="Los cambios y noticias de la línea ICO Crecimiento ordenados por fecha: lanzamiento, modalidad DANA, cuestionario de sostenibilidad y estado actual de la línea.",
 resumen="""<p>Recogemos aquí, por fecha, los cambios relevantes de la línea ICO Crecimiento. A <strong>2 de octubre de 2026</strong>:</p>
 <ul>
   <li>La línea sigue <strong>abierta</strong> hasta el 31 de diciembre de 2027 o hasta agotar el presupuesto.</li>
@@ -403,9 +403,6 @@ cuerpo="""
 <h2>Modalidad ICO Crecimiento DANA</h2>
 <p>El DCG vigente incluye la marca ICO Crecimiento DANA, para empresas de los municipios afectados por la DANA de 2024. Incorpora el aval público gratuito del 80 % del Real Decreto-ley 6/2024, sin comisiones de apertura ni de cancelación, y un tramo con intereses subvencionados para el circulante de pymes, según disponibilidad presupuestaria. Lo explicamos en la guía de <a href="../ico-crecimiento-dana/">ICO Crecimiento DANA</a>.</p>
 
-<h2>9 de febrero de 2026: ICO Crecimiento Exportadores</h2>
-<p>El Gobierno activó la línea <strong>ICO Crecimiento Exportadores</strong>, con 750 millones de euros, para pymes afectadas por los cambios en el entorno arancelario mundial: exportadoras, importadoras y proveedoras de empresas expuestas. Incluye un componente de ayuda de 181 millones de euros de fondos europeos Next Generation, en forma de tramo no reembolsable y bonificación del tipo de interés. El plazo de solicitud anunciado llegaba hasta el 1 de julio de 2026, así que, si te interesa, confirma en el ICO si sigue abierta.</p>
-
 <h2>5 de septiembre de 2025: lanzamiento de ICO Crecimiento</h2>
 <p>El Gobierno y el ICO presentaron ICO Crecimiento, la primera línea de <strong>financiación directa y 100 % digital</strong> del ICO para pymes, sin banco intermediario, con una dotación inicial de <strong>1.000 millones de euros</strong>. Las solicitudes se presentan en la plataforma ICO Online desde el día siguiente a la publicación del DCG en la web del ICO.</p>
 <p>Desde el principio, la línea se dirigió a sociedades pyme con al menos 4 años de antigüedad y cuentas auditadas de los dos últimos ejercicios (o un aval que las sustituya), con préstamos desde 50.000 € para inversión (hasta 10 años) y circulante (hasta 5 años).</p>
@@ -413,6 +410,5 @@ cuerpo="""
 faqs=[
 ("¿Sigue abierta la línea ICO Crecimiento?", "Sí. A 2 de octubre de 2026 sigue admitiendo solicitudes, con plazo hasta el 31 de diciembre de 2027 o hasta que se agote el presupuesto. Las solicitudes se atienden por orden de presentación."),
 ("¿Cuándo se lanzó ICO Crecimiento?", "Se presentó el 5 de septiembre de 2025, con una dotación inicial de 1.000 millones de euros, como la primera línea de financiación directa y 100 % digital del ICO para pymes."),
-("¿Qué es ICO Crecimiento Exportadores?", "Una línea relacionada, activada el 9 de febrero de 2026 con 750 millones de euros, para pymes afectadas por el entorno arancelario. Incluye un tramo no reembolsable y bonificación del tipo de interés con fondos Next Generation."),
 ],
 ))

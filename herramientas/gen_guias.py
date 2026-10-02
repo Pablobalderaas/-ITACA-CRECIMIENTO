@@ -249,9 +249,6 @@ cuerpo="""
 </table>
 </div>
 
-<h2>ICO Crecimiento Exportadores</h2>
-<p>Existe una línea relacionada, ICO Crecimiento Exportadores, activada el 9 de febrero de 2026 con 750 millones de euros para pymes afectadas por el entorno arancelario. Combina préstamos a largo plazo con ayudas, como bonificaciones del tipo de interés y un tramo no reembolsable. Su plazo anunciado terminaba el 1 de julio de 2026: consulta las <a href="../novedades-ico-crecimiento/">novedades</a>.</p>
-
 <h2>ICO Crecimiento DANA</h2>
 <p>Las empresas de los municipios afectados por la DANA de 2024 tienen una modalidad propia, con aval público gratuito del 80 % y sin comisiones. Lo explicamos en la guía de <a href="../ico-crecimiento-dana/">ICO Crecimiento DANA</a>.</p>
 """,
