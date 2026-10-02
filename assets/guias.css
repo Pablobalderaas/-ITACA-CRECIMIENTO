@@ -57,3 +57,7 @@
   .legal-body .guia-list li.con-imagen { grid-template-columns: minmax(0, 1fr); }
   .legal-body .miniatura { height: 160px; }
 }
+.legal-body .cta strong { color: var(--paper); }
+.legal-body h2.hub-sub { margin-top: 56px; padding-top: 0; border-top: 0; }
+/* En móvil, el índice de guías va después del artículo para no empujar el contenido */
+@media (max-width: 900px) { .legal-side { order: 2; } }

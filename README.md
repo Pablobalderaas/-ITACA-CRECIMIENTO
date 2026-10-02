@@ -8,7 +8,7 @@ Web de Ítaca Crecimiento, consultoría especializada en ICO Crecimiento, el pr�
 - `guias/`: guías de referencia (una carpeta por guía).
 - `blog/`: artículos fechados (una carpeta por artículo).
 - `assets/blog/`: foto de portada de cada artículo (`<slug>.webp`) y su versión para redes (`<slug>-og.jpg`, 1200×630). Para un artículo nuevo, añade sus dos imágenes y su entrada en `IMAGENES` dentro de `gen_blog.py`.
-- `herramientas/gen_guias.py` y `herramientas/gen_blog.py`: generan las guías y el blog a partir de una plantilla común (usan `assets/legal.css` y `assets/guias.css`). Para añadir un artículo, añade una entrada a `POSTS` en `gen_blog.py` y ejecuta `python3 herramientas/gen_blog.py .` desde la raíz. Después añade la URL a `sitemap.xml` y a `llms.txt`.
+- `herramientas/gen_guias.py` (con las guías de `herramientas/guias_nuevas.py`) y `herramientas/gen_blog.py`: generan las guías y el blog a partir de una plantilla común (usan `assets/legal.css` y `assets/guias.css`). Para añadir un artículo, añade una entrada a `POSTS` en `gen_blog.py` y ejecuta `python3 herramientas/gen_blog.py .` desde la raíz. Después añade la URL a `sitemap.xml` y a `llms.txt`.
 - `assets/fonts/`: tipografías servidas desde la propia web (más rápido y sin enviar datos a Google). Licencias en `OFL-*.txt`.
 - `test-ico-crecimiento/`: test de 8 preguntas para saber si una empresa puede pedir ICO Crecimiento. Envía a Formspree los datos de contacto junto con el resultado y las respuestas.
 - `404.html`: página que muestra GitHub Pages cuando un enlace no existe.

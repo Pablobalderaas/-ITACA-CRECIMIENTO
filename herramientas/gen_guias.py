@@ -3,8 +3,8 @@ import json, os, sys, html, re
 
 ROOT = sys.argv[1]
 SITE = "https://itacacrecimiento.com"
-FECHA_ISO = "2026-09-30"
-FECHA = "30 de septiembre de 2026"
+FECHA_ISO = "2026-10-02"
+FECHA = "2 de octubre de 2026"
 AUTOR = "Javier Beltrán"
 
 GUIAS = []  # (slug, titulo, titulo_seo, descripcion, resumen_lista, cuerpo_html, faqs)
@@ -168,7 +168,9 @@ cuerpo="""
   <div><dt>Importe</dt><dd>Desde 50.000 €, sin importe máximo fijado</dd></div>
   <div><dt>Circulante</dt><dd>Hasta 5 años, con hasta 1 año de carencia. Hasta el 100 % de la necesidad. Más detalles en la guía de <a href="../ico-crecimiento-circulante/">ICO Crecimiento para circulante</a></dd></div>
   <div><dt>Inversión</dt><dd>Hasta 10 años, con hasta 2 años de carencia de principal. Hasta el 80 % de la inversión</dd></div>
-  <div><dt>Tipo de interés</dt><dd>Euríbor a 12 meses (si es negativo, se toma 0 %) más un margen del 1,75 %. El margen baja si la operación lleva aval (ver tabla)</dd></div>
+  <div><dt>Tipo de interés</dt><dd>Euríbor a 12 meses (si es negativo, se toma 0 %) más un margen del 1,75 %. Se revisa una vez al año. El margen baja si la operación lleva aval (ver tabla)</dd></div>
+  <div><dt>Devolución</dt><dd>Intereses mensuales, el día 15 de cada mes. Pasada la carencia, el capital se devuelve en cuotas mensuales de capital constantes, así que la cuota total va bajando</dd></div>
+  <div><dt>Desembolso</dt><dd>El circulante se desembolsa de una vez, en los 15 días siguientes a la firma. La inversión puede desembolsarse por partes, antes de que termine la carencia</dd></div>
   <div><dt>Comisiones</dt><dd>Apertura del 0,5 %, que se descuenta de la primera disposición. Cancelación anticipada del 0,5 % de lo devuelto (1 % si se debe a un incumplimiento). Sin comisión por lo que no se disponga</dd></div>
   <div><dt>Gastos de hasta 12 meses antes</dt><dd>Se pueden financiar inversiones y gastos realizados o iniciados en los 12 meses anteriores a la solicitud</dd></div>
   <div><dt>Gastos de consultoría</dt><dd>Financiables hasta el 100 %: la consultoría y la calificación crediticia necesarias para solicitar el préstamo</dd></div>
@@ -204,13 +206,13 @@ cuerpo="""
 <p>El ICO revisa todos estos puntos. Basta con que falle uno para que la operación no salga adelante, por eso conviene comprobarlos antes de presentar nada:</p>
 <ol class="pasos-guia">
   <li>Ser una sociedad mercantil con domicilio, establecimiento o actividad en España.</li>
-  <li>Tener al menos 4 años de antigüedad.</li>
+  <li>Tener al menos 4 años de antigüedad (con excepciones en operaciones cofinanciadas con entidades financieras).</li>
   <li>Ser pyme, contando también el grupo empresarial si la empresa pertenece a uno.</li>
   <li>Tener auditadas (o revisadas voluntariamente) las cuentas de los dos últimos ejercicios, o aportar un aval que lo sustituya. Lo explicamos en la guía del <a href="../aval-sgr/">aval de SGR</a>.</li>
   <li>No tener impagos con bancos en la CIRBE, ni al pedirlo ni al firmarlo.</li>
   <li>No ser una «empresa en crisis» según la normativa europea de ayudas.</li>
   <li>No tener pérdidas en los dos últimos ejercicios ni patrimonio neto negativo.</li>
-  <li>Alcanzar una calificación crediticia mínima en el análisis del propio ICO.</li>
+  <li>Alcanzar una calificación crediticia mínima de B (en la escala de S&amp;P) en el análisis del propio ICO. Si la empresa pertenece a un grupo, cuenta la peor calificación de las dos.</li>
   <li>Estar al corriente con Hacienda y la Seguridad Social.</li>
   <li>No estar afectada por las prohibiciones para recibir subvenciones públicas (se firma una declaración responsable).</li>
   <li>Tener las licencias y permisos necesarios para el proyecto.</li>
@@ -219,7 +221,7 @@ cuerpo="""
 <p>Tampoco pueden pedirla las empresas participadas en un 25 % o más por organismos públicos. Entre los sectores excluidos están, por ejemplo, el juego, el armamento, los medios de comunicación y la intermediación financiera (salvo empresas fintech e insurtech).</p>
 
 <h2>El cuestionario de sostenibilidad</h2>
-<p>Todas las solicitudes incluyen un cuestionario de sostenibilidad (criterios ambientales, sociales y de gobierno) que el ICO puntúa de 0 a 6. Si la empresa queda por debajo de 2 puntos, tiene que comprometerse a un plan de mejora y acreditarlo en 24 meses; si no lo consigue, el préstamo se encarece un 0,25 % anual durante el resto de su vida.</p>
+<p>Todas las solicitudes incluyen un cuestionario de sostenibilidad (criterios ambientales, sociales y de gobierno) que el ICO puntúa de 0 a 6. Si la empresa queda por debajo de 2 puntos, el contrato incluye un Plan de Remediación que hay que acreditar en 24 meses; si no se consigue, se aplica una comisión adicional del 0,25 % anual sobre el importe firmado. Lo explicamos en la guía del <a href="../cuestionario-sostenibilidad-ico-crecimiento/">cuestionario de sostenibilidad</a>.</p>
 <p>Muchas pymes puntúan bajo no porque no hagan las cosas, sino porque no las tienen por escrito: plan de igualdad, código de conducta, control de consumos o criterios con proveedores. Ordenar esa documentación antes de responder es de lo que más rinde al preparar la solicitud.</p>
 
 <h2>Cómo se solicita</h2>
@@ -227,11 +229,11 @@ cuerpo="""
   <li>Comprueba los requisitos, sobre todo la antigüedad, las cuentas auditadas o el aval, los resultados y la CIRBE.</li>
   <li>Prepara la documentación económica y la memoria técnica, que sigue un guion fijado por el propio ICO: qué se financia, cuánto cuesta y cómo se devolverá.</li>
   <li>Responde al cuestionario de sostenibilidad.</li>
-  <li>Presenta la solicitud en ICO Online con la firma electrónica de la empresa.</li>
-  <li>Atiende los requerimientos del ICO: los plazos de respuesta son de pocos días, así que conviene vigilar el buzón electrónico.</li>
+  <li>Presenta la solicitud en ICO Online con la firma electrónica de la empresa. El formulario permite designar un representante voluntario para que actúe ante el ICO durante la tramitación.</li>
+  <li>Atiende los requerimientos del ICO en un máximo de 5 días hábiles. Si no se contestan, o si la notificación electrónica no se abre en ese plazo, la solicitud se da por desistida.</li>
   <li>Si se aprueba, firma el préstamo y, después, justifica el destino de los fondos.</li>
 </ol>
-<p>Al no haber un banco que acompañe el proceso, la solicitud tiene que estar completa y bien argumentada desde el principio. Ahí es donde más ayuda preparar el expediente con un especialista.</p>
+<p>Al no haber un banco que acompañe el proceso, la solicitud tiene que estar completa y bien argumentada desde el principio. Ahí es donde más ayuda preparar el expediente con un especialista. Si la solicitud se inadmite o se desestima, se puede volver a presentar una vez corregidos los defectos, pero se pierde el turno en el orden de llegada.</p>
 
 <h2>ICO Crecimiento frente a las líneas de mediación</h2>
 <div class="table-wrap">
@@ -248,7 +250,10 @@ cuerpo="""
 </div>
 
 <h2>ICO Crecimiento Exportadores</h2>
-<p>Existe una línea relacionada, ICO Crecimiento Exportadores, dirigida a pymes exportadoras afectadas por el entorno arancelario. Combina préstamos a largo plazo con ayudas, como bonificaciones del tipo de interés y un tramo no reembolsable. Si tu empresa exporta, conviene estudiar cuál de las dos encaja mejor.</p>
+<p>Existe una línea relacionada, ICO Crecimiento Exportadores, activada el 9 de febrero de 2026 con 750 millones de euros para pymes afectadas por el entorno arancelario. Combina préstamos a largo plazo con ayudas, como bonificaciones del tipo de interés y un tramo no reembolsable. Su plazo anunciado terminaba el 1 de julio de 2026: consulta las <a href="../novedades-ico-crecimiento/">novedades</a>.</p>
+
+<h2>ICO Crecimiento DANA</h2>
+<p>Las empresas de los municipios afectados por la DANA de 2024 tienen una modalidad propia, con aval público gratuito del 80 % y sin comisiones. Lo explicamos en la guía de <a href="../ico-crecimiento-dana/">ICO Crecimiento DANA</a>.</p>
 """,
 faqs=[
 ("¿Qué es ICO Crecimiento?", "Es la línea de financiación directa del ICO para pymes: la solicitud se presenta en la plataforma ICO Online y es el propio ICO quien analiza y concede el préstamo, sin banco intermediario."),
@@ -296,6 +301,7 @@ cuerpo="""
 </table>
 </div>
 <p>Para la mayoría de pymes la vía más práctica es la SGR de su comunidad autónoma, que trabaja coordinada con la propia solicitud al ICO.</p>
+<p>En la solicitud, la empresa autoriza al ICO a pedir el aval a una SGR en su nombre si las condiciones de la operación lo exigen. El ICO puede hacerlo incluso cuando las cuentas están auditadas, si su análisis de riesgo lo aconseja.</p>
 
 <h2>Cómo se consigue el aval, paso a paso</h2>
 <ol class="pasos-guia">
@@ -315,6 +321,7 @@ cuerpo="""
   <div><dt>Comisión de aval</dt><dd>Un porcentaje anual sobre el importe avalado pendiente, mientras dure el aval.</dd></div>
 </dl>
 <p>Para comparar, suma estos costes al tipo de interés del préstamo y calcula el coste total de la financiación a lo largo de todo el plazo.</p>
+<p>Una buena noticia: según el reglamento de la línea, los costes del aval de la SGR (comisiones y aportación al capital) se pueden incluir en la financiación de ICO Crecimiento. Además, si la operación la origina la propia SGR, el tipo de interés puede reducirse hasta 0,25 puntos.</p>
 
 <h2>Ventajas e inconvenientes</h2>
 <h3>Ventajas</h3>
@@ -375,7 +382,7 @@ cuerpo="""
   </tbody>
 </table>
 </div>
-<p>Una misma empresa puede combinar las dos finalidades si tiene a la vez un proyecto de inversión y una necesidad de circulante.</p>
+<p>Una misma empresa puede combinar las dos finalidades si tiene a la vez un proyecto de inversión y una necesidad de circulante. El préstamo de circulante se desembolsa de una sola vez, en los 15 días siguientes a la firma.</p>
 
 <h2>Frente a una póliza de crédito del banco</h2>
 <p>La forma habitual de financiar el circulante es una póliza de crédito o una línea de descuento, que el banco renueva cada año. ICO Crecimiento no las sustituye, pero tiene ventajas claras como complemento:</p>
@@ -390,12 +397,13 @@ cuerpo="""
 <dl class="data-list">
   <div><dt>Comisión de apertura</dt><dd>1.000 € (0,5 %), una sola vez</dd></div>
   <div><dt>Primer año (carencia)</dt><dd>Solo intereses: unos 583 € al mes</dd></div>
-  <div><dt>Años 2 a 5</dt><dd>Cuota de unos 4.471 € al mes, capital más intereses</dd></div>
-  <div><dt>Intereses totales</dt><dd>Unos 21.600 € en los 5 años</dd></div>
+  <div><dt>Años 2 a 5</dt><dd>4.167 € de capital al mes, siempre igual, más los intereses de lo pendiente: la primera cuota ronda los 4.750 € y la última, los 4.180 €</dd></div>
+  <div><dt>Intereses totales</dt><dd>Unos 21.300 € en los 5 años</dd></div>
 </dl>
-<p>Es un cálculo simplificado para hacerse una idea. En el diagnóstico hacemos el cálculo con las cifras reales de tu empresa.</p>
+<p>El ICO cobra los intereses cada mes y, como regla general, devuelve el capital en cuotas mensuales constantes, por eso la cuota total baja con el tiempo. El tipo se revisa una vez al año con el Euríbor. Es un cálculo simplificado para hacerse una idea: en el estudio gratuito lo hacemos con las cifras reales de tu empresa.</p>
 
 <h2>Sectores donde más se usa</h2>
+<p>Tenemos guías específicas para <a href="../circulante-empresas-agroalimentarias/">empresas agroalimentarias</a>, <a href="../circulante-distribucion-mayoristas/">distribuidores y mayoristas</a>, <a href="../circulante-construccion-instaladoras/">constructoras e instaladoras</a> y <a href="../circulante-empresas-industriales/">empresas industriales</a>.</p>
 <ul>
   <li><strong>Transporte y logística:</strong> gasoil, peajes y nóminas al contado; cobro a 60 o 90 días.</li>
   <li><strong>Empresas que trabajan para la Administración:</strong> los pagos públicos a veces llegan tarde.</li>
@@ -432,8 +440,17 @@ faqs=[
 ],
 ))
 
-ORDEN = ["ico-crecimiento", "ico-crecimiento-circulante", "aval-sgr", "documentacion-prestamo-ico", "como-solicitar-un-prestamo-ico"]
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from guias_nuevas import NUEVAS
+GUIAS.extend(NUEVAS)
+
+ORDEN = ["ico-crecimiento", "ico-crecimiento-circulante", "aval-sgr", "cuestionario-sostenibilidad-ico-crecimiento",
+         "ico-crecimiento-dana", "novedades-ico-crecimiento", "documentacion-prestamo-ico", "como-solicitar-un-prestamo-ico",
+         "circulante-empresas-agroalimentarias", "circulante-distribucion-mayoristas",
+         "circulante-construccion-instaladoras", "circulante-empresas-industriales"]
 GUIAS.sort(key=lambda g: ORDEN.index(g["slug"]))
+PRINCIPALES = [g for g in GUIAS if g.get("grupo") != "sector"]
+SECTORES = [g for g in GUIAS if g.get("grupo") == "sector"]
 
 # ---------------------------------------------------------------- plantilla
 LOGO = '''<svg class="logo" viewBox="0 0 560 160" aria-hidden="true">
@@ -452,10 +469,12 @@ def strip(s):
 def page(depth, url, title, desc, side_current, body, jsonld):
     up = "../" * depth
     CUR = ' aria-current="page"'
-    nav = "".join(
-        f'<a href="{up}guias/{g["slug"]}/"{CUR if side_current == g["slug"] else ""}>{g["titulo"]}</a>'
-        for g in GUIAS
-    )
+    def enlaces(lista):
+        return "".join(
+            f'<a href="{up}guias/{g["slug"]}/"{CUR if side_current == g["slug"] else ""}>{g.get("corto", g["titulo"])}</a>'
+            for g in lista)
+    nav = enlaces([g for g in GUIAS if g.get("grupo") != "sector"])
+    nav_sect = enlaces([g for g in GUIAS if g.get("grupo") == "sector"])
     hub_cur = ' aria-current="page"' if side_current == "hub" else ""
     ld = "\n".join(
         f'<script type="application/ld+json">\n{json.dumps(j, ensure_ascii=False, indent=2)}\n</script>' for j in jsonld
@@ -502,6 +521,8 @@ def page(depth, url, title, desc, side_current, body, jsonld):
   <aside class="legal-side">
     <p class="eyebrow">Guías ICO</p>
     <nav class="legal-nav" aria-label="Guías"><a href="{up}guias/"{hub_cur}>Todas las guías</a>{nav}<a href="{up}blog/">Blog →</a></nav>
+    <p class="eyebrow">Circulante por sector</p>
+    <nav class="legal-nav" aria-label="Circulante por sector">{nav_sect}</nav>
   </aside>
   <article class="legal-body">
 {body}
@@ -533,7 +554,12 @@ CTA = '''
     </aside>'''
 
 def relacionados(slug):
-    otras = [x for x in GUIAS if x["slug"] != slug][:3]
+    g = next(x for x in GUIAS if x["slug"] == slug)
+    if g.get("grupo") == "sector":
+        base = [x for x in GUIAS if x["slug"] == "ico-crecimiento-circulante"] + [x for x in SECTORES if x["slug"] != slug]
+    else:
+        base = [x for x in PRINCIPALES if x["slug"] != slug]
+    otras = base[:3]
     li = "".join(f'\n      <li><a href="../{x["slug"]}/">{x["titulo"]}</a></li>' for x in otras)
     return f'''
     <nav class="relacionados" aria-label="Sigue leyendo">
@@ -575,8 +601,9 @@ for g in GUIAS:
         fh.write(page(2, url, f"{g['seo']} | Ítaca Crecimiento", g["desc"], g["slug"], body, jsonld))
 
 # hub
-items = "".join(
-    f'\n      <li><h2><a href="{g["slug"]}/">{g["titulo"]}</a></h2><p>{g["desc"]}</p></li>' for g in GUIAS)
+def lista(gs):
+    return "".join(f'\n      <li><h2><a href="{g["slug"]}/">{g["titulo"]}</a></h2><p>{g["desc"]}</p></li>' for g in gs)
+items = lista(PRINCIPALES) + '\n    </ul>\n    <h2 class="hub-sub">ICO Crecimiento para circulante, por sector</h2>\n    <ul class="guia-list">' + lista(SECTORES)
 hub_body = f'''    <p class="breadcrumb"><a href="../">Inicio</a><span aria-hidden="true">/</span>Guías</p>
     <h1>Guías sobre ICO Crecimiento y préstamos ICO</h1>
     <p class="lead">Explicaciones claras sobre ICO Crecimiento, el préstamo directo del ICO para pymes, y sobre cómo se piden los préstamos ICO: requisitos, documentación y pasos. Escritas por {AUTOR}, de Ítaca Crecimiento.</p>
